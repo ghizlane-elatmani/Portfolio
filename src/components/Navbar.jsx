@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useState } from "react";
 import { BiGridAlt, BiX } from "react-icons/bi";
 
@@ -13,17 +12,17 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="bg-slate-900 w-11/12 rounded-[100px] fixed top-4 left-1/2 -translate-x-1/2">
+    <nav className="bg-slate-900 shadow-lg shadow-slate-900/50 w-11/12 rounded-[100px] fixed top-4 left-1/2 -translate-x-1/2">
       <div className="md:flex items-center justify-between py-4 px-6 md:px-10 ">
         {/* ===== LOGO ===== */}
-        <div className="text-sky-100 text-lg font-semibold tracking-wider cursor-pointer">
+        <div className="text-amber-50 text-lg font-semibold tracking-wider cursor-pointer">
           Ghizlane
         </div>
 
         {/* ===== HAMBURGER MENU ===== */}
         <div
           onClick={() => setOpenMenu(!openMenu)}
-          className="text-sky-100 hover:text-sky-400 text-2xl cursor-pointer absolute right-8 top-5 md:hidden"
+          className="text-amber-50 hover:text-amber-500 text-2xl cursor-pointer absolute right-8 top-5 md:hidden"
         >
           {openMenu ? <BiX /> : <BiGridAlt />}
         </div>
@@ -41,7 +40,7 @@ const Navbar = () => {
               <li key={index} className="md:ml-8 md:my-0 my-7">
                 <a
                   href={link.url}
-                  className="text-sky-100 text-lg hover:text-sky-400 duration-500"
+                  className="text-amber-50 text-lg hover:text-amber-500 duration-500"
                 >
                   {link.name}
                 </a>
