@@ -3,7 +3,10 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <section className="min-w-full p-3 min-h-screen flex justify-center items-center text-amber-50 bg-slate-600">
+    <section
+      className="min-w-full p-3 min-h-screen xl:min-h-max xl:py-[15rem] flex justify-center items-center text-slate-900 
+    bg-slate-100 dark:bg-slate-800 dark:text-amber-50"
+    >
       <div className="flex gap-5 ">
         {/* ===== SOCIAL ===== */}
         <div className="flex flex-col gap-2 justify-center">
@@ -18,7 +21,10 @@ const Home = () => {
               cursor: "pointer",
             }}
           >
-            <FaLinkedin className="md:text-3xl text-amber-50 hover:text-amber-500 transition-all duration-500" />
+            <FaLinkedin
+              className="md:text-3xl text-slate-900 dark:text-amber-50 hover:text-amber-500 
+              dark:hover:text-amber-500 transition-all duration"
+            />
           </a>
           <a
             href="https://github.com/ghizlane-elatmani"
@@ -32,7 +38,10 @@ const Home = () => {
               cursor: "pointer",
             }}
           >
-            <FaGithubSquare className="md:text-3xl text-amber-50 hover:text-amber-500 transition-all duration-500" />
+            <FaGithubSquare
+              className="md:text-3xl text-slate-900 dark:text-amber-50 
+            hover:text-amber-500 dark:hover:text-amber-500 transition-all duration"
+            />
           </a>
         </div>
 
@@ -52,16 +61,20 @@ const Home = () => {
           <div className="flex gap-2">
             <a
               href="#contact"
-              className="md:text-lg text-base rounded-full border-2 border-amber-500 text-amber-50 bg-amber-500 px-3 py-1
-            hover:bg-amber-600 hover:border-amber-600 transition-all duration-500 easy-in flex items-center justify-center gap-1 "
+              className="text-white bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 
+              dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg md:text-lg text-base px-3 py-2 text-sm
+              md:px-5 md:py-2.5 text-center flex items-center justify-center gap-1"
             >
               <BiCloudDownload />
               Resume
             </a>
             <a
               href="#contact"
-              className="md:text-lg text-base rounded-full border-2 border-amber-500 text-amber-500 px-3 py-1
-            hover:bg-amber-500 hover:text-amber-50 transition-all duration-500 easy-in flex items-center justify-center gap-1 "
+              className="md:text-lg text-base rounded-lg border-2 border-slate-100 dark:border-slate-800
+              dark:hover:border-amber-500 hover:border-amber-500 text-slate-900 dark:text-amber-50 px-3 py-1
+              dark:hover:text-amber-500 hover:text-amber-500 transition-all duration easy-in flex items-center 
+              justify-center gap-1 md:text-lg text-base px-3 py-2 text-sm md:px-5 md:py-2.5"
             >
               <BiDownArrowAlt />
               Learn more
