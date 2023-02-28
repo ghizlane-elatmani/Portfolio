@@ -1,5 +1,4 @@
 import React from "react";
-import { BiCheck, BiCheckboxMinus } from "react-icons/bi";
 
 const About = () => {
   return (
