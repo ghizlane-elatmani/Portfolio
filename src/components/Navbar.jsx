@@ -13,7 +13,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
 
   return (
     <nav
-      className="bg-slate-300 dark:bg-slate-900 shadow-lg shadow-slate-300/50 dark:shadow-slate-900/50
+      className="z-40 bg-slate-300 dark:bg-slate-900 shadow-lg shadow-slate-300/50 dark:shadow-slate-900/50
        w-11/12 rounded-[100px] fixed top-4 left-1/2 -translate-x-1/2 trantion-all duration"
     >
       <div className="md:flex items-center justify-between py-4 px-6 md:px-10 ">
