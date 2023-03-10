@@ -4,7 +4,7 @@
 
 <div align="center">
   <h3>
-    <a href="">
+    <a href="https://ghizlane-dev.netlify.app/">
       Website
     </a>
     <span> | </span>
@@ -32,7 +32,7 @@
 
 ![My Image](src/assets/overview.png)
 
-- You can see my website here: ""
+- You can see my website here: "https://ghizlane-dev.netlify.app/"
 - In this project, I learn how to make beautiful portfolio.
 - I hope to make more beautifuls websites and become an expert in front-end developmemt :)
 
@@ -51,5 +51,5 @@
 
 ## Contact
 
-- Website []()
+- Website [ghizlane-dev](https://ghizlane-dev.netlify.app/)
 - GitHub [@ghizlane-elatmani](https://github.com/ghizlane-elatmani)
