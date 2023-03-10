@@ -9,7 +9,12 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("gmail", "template_hgb76hq", form.current, "LUYNqUJORVgtVVq27")
+      .sendForm(
+        "service_nx3j5ir",
+        "template_hgb76hq",
+        form.current,
+        "V5K9QOCar5NY_grb0"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -26,7 +31,7 @@ const Contact = () => {
     <section name="contact" className="bg-red-400 dark:bg-indigo-400">
       <div className="container max-w-5xl m-auto p-2 py-[4rem] xl:py-[7rem]">
         <form
-          className="flex flex-col max-w-xl m-auto bg-red-100 px-5 py-9 gap-5 rounded-lg
+          className="flex flex-col max-w-lg m-auto bg-red-100 px-5 py-9 gap-5 rounded-lg
           dark:bg-slate-700"
           ref={form}
           onSubmit={sendEmail}
@@ -45,7 +50,7 @@ const Contact = () => {
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 
               leading-tight focus:outline-none focus:shadow-outline
-              dark:bg-slate-900 dark:border-blue-900 dark:text-slate-50"
+              dark:bg-slate-900 dark:border-blue-900 dark:text-slate-50 "
               id="input-name"
               placeholder="Name"
               type="text"
@@ -89,7 +94,8 @@ const Contact = () => {
           </div>
 
           <div
-            className="max-w-min flex bg-blue-600 items-center gap-2 px-4 py-2 rounded-lg text-blue-50 mt-6"
+            className="max-w-min m-auto justify-self-center flex items-center gap-2 px-5 py-2 rounded-lg 
+            bg-red-400 hover:bg-red-500 dark:bg-indigo-400 dark:hover:bg-indigo-500 text-red-50 dark:text-blue-50 mt-6"
             type="submit"
           >
             <FaPaperPlane />
