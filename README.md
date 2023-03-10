@@ -40,6 +40,7 @@
 
 - [ReactJS]
 - [Tailwind CSS]
+- [EmailJS]
 
 ## Acknowledgements
 
