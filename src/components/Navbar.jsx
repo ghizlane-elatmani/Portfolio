@@ -52,7 +52,8 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
                   smooth={true}
                   duration={500}
                   onClick={() => setOpenMenu(false)}
-                  className="text-slate-900 dark:text-amber-50 text-lg hover:text-amber-500 duration cursor-pointer"
+                  className="text-slate-900 dark:text-amber-50 text-lg hover:text-amber-500 duration 
+                  dark:hover:border-amber-500 dark:hover:text-amber-500 cursor-pointer"
                 >
                   {link.name}
                 </Link>
@@ -62,7 +63,8 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
 
           <button
             className="md:ml-8 p-2 border-2 border-slate-900 rounded-full 
-            dark:border-amber-50 dark:text-amber-50 hover:border-amber-500 hover:text-amber-500"
+            dark:border-amber-50 dark:text-amber-50 hover:border-amber-500 hover:text-amber-500
+            dark:hover:border-amber-500 dark:hover:text-amber-500"
             onClick={() => handleThemeSwitch()}
           >
             {theme === "light" ? <BiMoon /> : <BiSun />}

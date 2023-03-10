@@ -44,8 +44,8 @@ export const projectList = [
   {
     id: "2",
     name: "TodoApp",
-    urlSite: "https://country-quiz-ge.netlify.app/",
-    urlCode: "https://github.com/ghizlane-elatmani/Country-quiz",
+    urlSite: "https://todo-app-ge.netlify.app/",
+    urlCode: "https://github.com/ghizlane-elatmani/Todo-App",
     picture: todo,
   },
 ];
