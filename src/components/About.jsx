@@ -2,7 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-amber-500 dark:bg-amber-800 py-[5rem] xl:py-[8rem] text-slate-900 dark:text-amber-50">
+    <section
+      name="about"
+      className="bg-amber-500 dark:bg-amber-800 py-[5rem] xl:py-[8rem] text-slate-900 dark:text-amber-50"
+    >
       <div className="container max-w-4xl m-auto p-2">
         <h3
           className="md:text-xl text-lg mb-4 uppercase tracking-wide text-amber-900 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BiGridAlt, BiX, BiMoon, BiSun } from "react-icons/bi";
+import { Link } from "react-scroll";
 
 const Navbar = ({ theme, handleThemeSwitch }) => {
   let links = [
@@ -46,12 +47,15 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
           {links.map((link, index) => {
             return (
               <li key={index} className="md:ml-8 md:my-0 my-7">
-                <a
-                  href={link.url}
-                  className="text-slate-900 dark:text-amber-50 text-lg hover:text-amber-500 duration"
+                <Link
+                  to={link.name.toLowerCase()}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setOpenMenu(false)}
+                  className="text-slate-900 dark:text-amber-50 text-lg hover:text-amber-500 duration cursor-pointer"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             );
           })}

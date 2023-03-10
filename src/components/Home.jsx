@@ -4,6 +4,7 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 const Home = () => {
   return (
     <section
+      name="home"
       className="min-w-full p-3 min-h-screen xl:min-h-max xl:py-[15rem] flex justify-center items-center text-slate-900 
     bg-slate-100 dark:bg-slate-800 dark:text-amber-50"
     >

@@ -4,7 +4,7 @@ import { projectList } from "../data/projects";
 
 const Projects = () => {
   return (
-    <section className="bg-slate-100 dark:bg-slate-800">
+    <section name="projects" className="bg-slate-100 dark:bg-slate-800">
       <div className="container max-w-5xl m-auto p-2 py-[5rem] xl:py-[8rem]">
         <h3
           className="md:text-xl text-lg mb-4 uppercase tracking-wide text-amber-900 
