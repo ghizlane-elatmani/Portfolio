@@ -3,7 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit,minmax(15rem,315px))",
+      },
+    },
   },
   plugins: [],
 };

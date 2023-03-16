@@ -17,34 +17,33 @@ const Projects = () => {
           My recent work
         </h2>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <ul className="grid gap-5 grid-cols-fluid">
           {projectList.map((project) => {
             return (
               <li
                 key={project.id}
-                className="relative z-0 bg-slate-300 dark:bg-slate-900 rounded-lg overflow-hidden
+                className="bg-slate-300 dark:bg-slate-900 rounded-lg p-2
+                text-slate-900 dark:text-amber-50
+                hover:scale-105 duration-75
                 shadow-lg shadow-slate-200/40 hover:shadow-indigo-200/40
-                dark:shadow-lg dark:shadow-slate-900/40 dark:hover:shadow-indigo-900/40
-                border boder-slate-500 dark:border-slate-900"
+                dark:shadow-lg dark:shadow-slate-900/40 dark:hover:shadow-indigo-900/40"
               >
-                <div
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                bg-amber-50 p-2 rounded-lg dark:bg-slate-900 dark:text-amber-50 cursor-default
-                "
-                >
-                  {project.name}
-                </div>
+                <img
+                  src={project.picture}
+                  className="rounded-lg mx-auto"
+                  alt=""
+                />
 
-                <img src={project.picture} alt="" />
+                <p className="font-bold px-4 pt-4">{project.name}</p>
 
-                <div className="flex">
+                <p className=" px-4 pt-2">{project.desc}</p>
+
+                <div className="flex gap-2 mx-4 mt-6 mb-3">
                   <a
                     href={project.urlSite}
-                    className="flex-1 flex justify-center items-center gap-2 p-2 rounded-bl-lg text-lg uppercase
-                    border-2 border-amber-50 bg-amber-50 text-slate-900 
-                    dark:bg-amber-700 dark:text-amber-50 dark:border-amber-700 
-                    dark:hover:bg-amber-600 dark:hover:border-amber-600
-                    hover:border-amber-500 hover:text-amber-500"
+                    className="flex flex-row justify-center items-center gap-2 px-6 py-1 rounded-[50px] 
+                    bg-amber-400 hover:bg-amber-500 duration
+                    dark:bg-amber-600 dark:hover:bg-amber-700"
                   >
                     <BiWindowAlt />
                     Site
@@ -52,11 +51,8 @@ const Projects = () => {
 
                   <a
                     href={project.urlCode}
-                    className="flex-1 flex justify-center items-center gap-2 p-2 text-lg uppercase
-                    rounded-br-lg border-2 border-slate-300
-                    bg-slate-300 text-slate-800 dark:bg-slate-900 dark:text-amber-50 
-                    hover:border-slate-400 hover:bg-slate-400
-                    dark:border-slate-900 dark:hover:border-amber-500 dark:hover:text-amber-500"
+                    className="flex flex-row justify-center items-center gap-2 px-6 py-1 rounded-[50px] 
+                    bg-indigo-300 hover:bg-indigo-400 dark:bg-indigo-700 dark:hover:bg-indigo-800"
                   >
                     <BiCode />
                     Code
