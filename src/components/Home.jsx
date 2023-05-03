@@ -1,5 +1,4 @@
 import { BiCloudDownload, BiDownArrowAlt } from "react-icons/bi";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-scroll";
 import resume from "../assets/resume.pdf";
 
