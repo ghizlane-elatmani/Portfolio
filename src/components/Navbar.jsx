@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { BiGridAlt, BiX, BiMoon, BiSun } from "react-icons/bi";
+import {
+  BsLinkedin,
+  BsGithub,
+  BsFillMoonStarsFill,
+  BsSunFill,
+  BsX,
+  BsList,
+} from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const Navbar = ({ theme, handleThemeSwitch }) => {
@@ -13,65 +20,75 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav
-      className="z-40 bg-slate-300 dark:bg-slate-900 shadow-lg shadow-slate-300/50 dark:shadow-slate-900/50
-       w-11/12 rounded-[100px] fixed top-4 left-1/2 -translate-x-1/2 trantion-all duration"
-    >
-      <div className="md:flex items-center justify-between py-4 px-6 md:px-10 ">
-        {/* ===== LOGO ===== */}
-        <div
-          className="text-amber-500 text-lg font-semibold tracking-wider 
-        cursor-pointer"
-        >
-          Ghizlane
-        </div>
+    <div className="bg-slate-30 fixed z-40 w-full backdrop-blur-md ">
+      <nav className="m-auto max-w-5xl">
+        <div className="items-center justify-between py-4 px-6 md:flex md:px-10 ">
+          <div className="cursor-pointer text-lg tracking-wider text-blue-500">
+            Ghizlane.js
+          </div>
 
-        {/* ===== HAMBURGER MENU ===== */}
-        <div
-          onClick={() => setOpenMenu(!openMenu)}
-          className="text-slate-900 dark:text-amber-50 hover:text-amber-500 text-2xl 
-          cursor-pointer absolute right-8 top-5 md:hidden"
-        >
-          {openMenu ? <BiX /> : <BiGridAlt />}
-        </div>
-
-        {/* ===== MENU ===== */}
-        <ul
-          className={`md:flex md:items-center md:w-auto md:pb-0 md:pl-0 pb-12 absolute md:static 
-        bg-slate-300 dark:bg-slate-900 md:z-auto z-[-1] right-0 top-[4rem] w-3/5 pl-8 rounded-[13px] 
-        transition-all duration 
-        ${
-          openMenu ? "opacity-100" : "right-[-490px] md:opacity-100 opacity-0"
-        }`}
-        >
-          {links.map((link, index) => {
-            return (
-              <li key={index} className="md:ml-8 md:my-0 my-7">
-                <Link
-                  to={link.name.toLowerCase()}
-                  smooth={true}
-                  duration={500}
-                  onClick={() => setOpenMenu(false)}
-                  className="text-slate-900 dark:text-amber-50 text-lg hover:text-amber-500 duration 
-                  dark:hover:border-amber-500 dark:hover:text-amber-500 cursor-pointer"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            );
-          })}
-
-          <button
-            className="md:ml-8 p-2 border-2 border-slate-900 rounded-full 
-            dark:border-amber-50 dark:text-amber-50 hover:border-amber-500 hover:text-amber-500
-            dark:hover:border-amber-500 dark:hover:text-amber-500"
-            onClick={() => handleThemeSwitch()}
+          <div
+            onClick={() => setOpenMenu(!openMenu)}
+            className="absolute right-8 top-5 cursor-pointer text-2xl text-neutral-500 hover:text-blue-500 dark:text-blue-50 dark:hover:text-blue-500 md:hidden"
           >
-            {theme === "light" ? <BiMoon /> : <BiSun />}
-          </button>
-        </ul>
-      </div>
-    </nav>
+            {openMenu ? <BsX /> : <BsList />}
+          </div>
+
+          <ul
+            className={`duration absolute left-0 top-[4rem] z-[-1] w-full rounded-[13px] pb-12 pl-8 transition-all md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+              openMenu
+                ? "min-h-screen bg-white opacity-100 dark:bg-slate-900 md:min-h-0"
+                : "right-[-490px] opacity-0 md:opacity-100"
+            }`}
+          >
+            {links.map((link, index) => {
+              return (
+                <li key={index} className="my-7 md:my-0 md:ml-8">
+                  <Link
+                    to={link.name.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => setOpenMenu(false)}
+                    className="duration cursor-pointer text-base text-neutral-600 hover:text-blue-500 dark:text-neutral-50 dark:hover:text-blue-500"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
+
+            <li className="mb-7 md:mb-0 md:ml-8">
+              <button
+                className=" flex items-center text-neutral-600 hover:text-blue-500 dark:text-neutral-50 dark:hover:border-amber-500 dark:hover:text-blue-500"
+                onClick={() => handleThemeSwitch()}
+              >
+                {theme === "light" ? <BsSunFill /> : <BsFillMoonStarsFill />}
+              </button>
+            </li>
+
+            <li className="mb-7 md:mb-0 md:ml-3">
+              <a
+                href="https://github.com/ghizlane-elatmani"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub className=" duration text-neutral-600 transition-all hover:text-blue-500 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
+              </a>
+            </li>
+
+            <li className="md:ml-3">
+              <a
+                href="https://www.linkedin.com/in/ghizlane-el-atmani-a91732214/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsLinkedin className="duration text-neutral-600 transition-all hover:text-blue-500 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 };
 
