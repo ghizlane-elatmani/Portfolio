@@ -7,85 +7,40 @@ const Home = () => {
   return (
     <section
       name="home"
-      className="min-w-full p-3 min-h-screen xl:min-h-max xl:py-[15rem] flex justify-center items-center text-slate-900 
-    bg-slate-50 dark:bg-slate-800 dark:text-amber-50"
+      className="flex min-h-screen min-w-full items-center justify-center bg-neutral-50 p-3 dark:bg-slate-900 xl:min-h-max xl:py-[15rem]"
     >
-      <div className="flex gap-5 ">
-        {/* ===== SOCIAL ===== */}
-        <div className="flex flex-col gap-2 justify-center">
+      <div className="text-center">
+        <h1 className="font-smibold mb-2 text-2xl text-neutral-800 dark:text-neutral-50 md:text-4xl">
+          Ghizlane EL ATMANI
+        </h1>
+
+        <h3 className="mb-4 text-xl font-light uppercase tracking-wide text-blue-500 md:text-2xl">
+          - Web Developer -
+        </h3>
+
+        <p className="mb-6 max-w-prose text-base text-neutral-600 dark:text-neutral-300 md:w-[50ch] md:text-lg">
+          I'm a web developer based in Rabat (Morocco), and I'm very passionate
+          and dedicated to my work.
+        </p>
+
+        <div className="flex justify-center gap-2">
           <a
-            href="https://www.linkedin.com/in/ghizlane-el-atmani-a91732214/"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "#222",
-              fontSize: "1.5rem",
-              cursor: "pointer",
-            }}
+            href={resume}
+            download="ghizlane-elatmani"
+            className="flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-3 py-1 text-sm font-medium text-neutral-50 shadow-lg shadow-blue-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:shadow-lg dark:shadow-blue-800/80 dark:focus:ring-blue-800 md:px-5 md:py-2 md:text-base"
           >
-            <FaLinkedin
-              className="md:text-3xl text-slate-900 dark:text-amber-50 hover:text-amber-500 
-              dark:hover:text-amber-500 transition-all duration"
-            />
+            <BiCloudDownload />
+            Resume
           </a>
-          <a
-            href="https://github.com/ghizlane-elatmani"
-            className="social-icon"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "#222",
-              fontSize: "1.5rem",
-              cursor: "pointer",
-            }}
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="duration easy-in flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 border-slate-100 px-3 py-1 text-sm text-neutral-900 transition-all hover:border-blue-500 hover:text-blue-500 dark:border-slate-900 dark:text-neutral-50 dark:hover:border-blue-500 dark:hover:text-blue-500 md:px-5 md:py-2 md:text-base"
           >
-            <FaGithubSquare
-              className="md:text-3xl text-slate-900 dark:text-amber-50 
-            hover:text-amber-500 dark:hover:text-amber-500 transition-all duration"
-            />
-          </a>
-        </div>
-
-        {/* ===== DESCRIPTION ===== */}
-        <div className="">
-          <h1 className="md:text-4xl text-2xl mb-2">Ghizlane EL ATMANI</h1>
-
-          <h3 className="md:text-2xl text-xl mb-4 uppercase tracking-wide text-amber-500 font-light">
-            Web Developer
-          </h3>
-
-          <p className="md:text-lg text-base mb-6 md:w-[50ch] max-w-prose">
-            I'm a web developer based in Rabat (Morocco), and I'm very
-            passionate and dedicated to my work
-          </p>
-
-          <div className="flex gap-2">
-            <a
-              href={resume}
-              download="ghizlane-elatmani"
-              className="text-white bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 
-              dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg md:text-lg text-base px-3 py-2 text-sm
-              md:px-5 md:py-2.5 text-center flex items-center justify-center gap-1"
-            >
-              <BiCloudDownload />
-              Resume
-            </a>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="md:text-lg text-base rounded-lg border-2 border-slate-100 dark:border-slate-800
-              dark:hover:border-amber-500 hover:border-amber-500 text-slate-900 dark:text-amber-50 px-3 py-1
-              dark:hover:text-amber-500 hover:text-amber-500 transition-all duration easy-in flex items-center 
-              justify-center gap-1 md:text-lg text-base px-3 py-2 text-sm md:px-5 md:py-2.5 cursor-pointer"
-            >
-              <BiDownArrowAlt />
-              Contact me
-            </Link>
-          </div>
+            <BiDownArrowAlt className="animate-bounce" />
+            Contact me
+          </Link>
         </div>
       </div>
     </section>
