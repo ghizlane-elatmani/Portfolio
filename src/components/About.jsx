@@ -5,26 +5,24 @@ const About = () => {
   return (
     <section
       name="about"
-      className=" text-slate-900 dark:bg-amber-800 dark:text-amber-50"
+      className=" bg-neutral-50 text-slate-900 dark:bg-slate-900 "
     >
       <Slider />
-      <div className="container m-auto max-w-5xl p-2">
+      <div className="container m-auto max-w-3xl p-2 md:py-[7rem]">
         <h3
-          className="mb-4 text-lg font-light uppercase tracking-wide text-amber-900 
-        dark:text-amber-200 md:text-xl"
+          className="mb-4 text-center text-lg font-light uppercase tracking-wide 
+        text-purple-900 dark:text-purple-400 md:text-xl"
         >
           About me
         </h3>
 
-        <h2 className="mb-6 text-xl md:text-2xl">Hello, I'm Ghizlane</h2>
-
-        <p className="mb-[4rem] indent-4 text-base md:text-lg">
-          I'm passionate about building things for the web. I started my journey
-          as an android developer after high school and lately, I've discovered
-          my passion for the world of web development and the beauty behind
-          building useful websites like the one you will find in this portfolio.
-          I'm now looking for a junior dev position to finally kick start my
-          career and learn among professionals.
+        <p className=" text-center text-base text-neutral-600 dark:text-neutral-300 md:text-lg">
+          Hello, I'm Ghizlane! I'm passionate about building things for the web.
+          I started my journey as an android developer after high school and
+          lately, I've discovered my passion for the world of web development
+          and the beauty behind building useful websites like the one you will
+          find in this portfolio. I'm now looking for a junior dev position to
+          finally kick start my career and learn among professionals.
         </p>
       </div>
     </section>
