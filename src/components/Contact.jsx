@@ -28,29 +28,34 @@ const Contact = () => {
   };
 
   return (
-    <section name="contact" className="bg-red-400 dark:bg-indigo-400">
-      <div className="container max-w-5xl m-auto p-2 py-[4rem] xl:py-[7rem]">
+    <section
+      name="contact"
+      // style={{
+      //   backgroundImage: `url(${backgroundImg})`,
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundPosition: "center",
+      // }}
+    >
+      <div className="container m-auto max-w-4xl p-2 py-[4rem] xl:py-[7rem]">
         <form
-          className="flex flex-col max-w-lg m-auto bg-red-100 px-5 py-9 gap-5 rounded-lg
-          dark:bg-slate-700"
+          className="m-auto flex max-w-md flex-col gap-5 rounded-lg bg-neutral-100 px-5 py-9 dark:bg-neutral-700"
           ref={form}
           onSubmit={sendEmail}
         >
-          <h2 className="md:text-2xl text-xl mb-6 text-slate-900 dark:text-amber-50 text-center">
+          <h2 className="mb-6 text-center text-xl text-slate-900 dark:text-amber-50 md:text-2xl">
             Contact Me
           </h2>
 
           <div className="flex flex-col gap-1">
             <label
-              className="block text-slate-700 text-sm sm:text-base font-bold dark:text-red-50"
+              className="block text-sm font-bold text-slate-700 dark:text-blue-50 sm:text-base"
               htmlFor="input-name"
             >
               Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 
-              leading-tight focus:outline-none focus:shadow-outline
-              dark:bg-slate-900 dark:border-blue-900 dark:text-slate-50 "
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3 leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50 "
               id="input-name"
               placeholder="Name"
               type="text"
@@ -60,15 +65,13 @@ const Contact = () => {
 
           <div className="flex flex-col gap-1">
             <label
-              className="block text-slate-700 text-sm sm:text-base font-bold dark:text-red-50"
+              className="block text-sm font-bold text-slate-700 dark:text-blue-50 sm:text-base "
               htmlFor="input-email"
             >
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 
-              leading-tight focus:outline-none focus:shadow-outline
-              dark:bg-slate-900 dark:border-blue-900 dark:text-slate-50"
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3  leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50"
               id="input-email"
               placeholder="Email"
               type="email"
@@ -78,15 +81,13 @@ const Contact = () => {
 
           <div className="flex flex-col gap-1">
             <label
-              className="block text-slate-700 text-sm sm:text-base font-bold dark:text-red-50"
+              className="block text-sm font-bold text-slate-700 dark:text-blue-50 sm:text-base"
               htmlFor="input-msg"
             >
               Message
             </label>
             <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-slate-700 
-              leading-tight focus:outline-none focus:shadow-outline
-              dark:bg-slate-900 dark:border-blue-900 dark:text-slate-50"
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3  leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50"
               id="input-msg"
               placeholder="Message"
               name="message"
@@ -94,13 +95,12 @@ const Contact = () => {
           </div>
 
           <div
-            className="max-w-min m-auto justify-self-center flex items-center gap-2 px-5 py-2 rounded-lg 
-            bg-red-400 hover:bg-red-500 dark:bg-indigo-400 dark:hover:bg-indigo-500 text-red-50 dark:text-blue-50 mt-6"
+            className="m-auto mt-6 flex max-w-min items-center gap-2 justify-self-center rounded-lg bg-blue-400 px-5 py-2 text-blue-50 hover:bg-blue-500 dark:bg-indigo-400 dark:text-blue-50 dark:hover:bg-indigo-500"
             type="submit"
           >
             <FaPaperPlane />
             <input
-              className="cursor-pointer flex-1"
+              className="flex-1 cursor-pointer"
               type="submit"
               value="Send"
             />

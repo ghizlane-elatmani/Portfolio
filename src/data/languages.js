@@ -23,31 +23,113 @@ export const languages = [
     img: javascript,
   },
   {
-    id: 31,
+    id: 4,
     img: typescript,
   },
   {
-    id: 4,
+    id: 5,
     img: html,
   },
   {
-    id: 5,
+    id: 6,
     img: css,
   },
   {
-    id: 6,
+    id: 7,
     img: tailwindcss,
   },
   {
-    id: 7,
+    id: 8,
     img: java,
   },
   {
-    id: 8,
+    id: 9,
     img: spring,
   },
   {
-    id: 9,
+    id: 10,
+    img: mysql,
+  },
+  // Repeat the same array to have an "infinite loop"
+  {
+    id: 1.1,
+    img: react,
+  },
+  {
+    id: 2,
+    img: next,
+  },
+  {
+    id: 3.1,
+    img: javascript,
+  },
+  {
+    id: 4.1,
+    img: typescript,
+  },
+  {
+    id: 5.1,
+    img: html,
+  },
+  {
+    id: 6.1,
+    img: css,
+  },
+  {
+    id: 7.1,
+    img: tailwindcss,
+  },
+  {
+    id: 8.1,
+    img: java,
+  },
+  {
+    id: 9.1,
+    img: spring,
+  },
+  {
+    id: 10.1,
+    img: mysql,
+  },
+  // Repeat the same array to have an "infinite loop"
+  {
+    id: 1.2,
+    img: react,
+  },
+  {
+    id: 2.2,
+    img: next,
+  },
+  {
+    id: 3.2,
+    img: javascript,
+  },
+  {
+    id: 4.2,
+    img: typescript,
+  },
+  {
+    id: 5.2,
+    img: html,
+  },
+  {
+    id: 6.2,
+    img: css,
+  },
+  {
+    id: 7.2,
+    img: tailwindcss,
+  },
+  {
+    id: 8.2,
+    img: java,
+  },
+  {
+    id: 9.2,
+    img: spring,
+  },
+  {
+    id: 10.2,
     img: mysql,
   },
 ];

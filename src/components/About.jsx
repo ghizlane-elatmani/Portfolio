@@ -8,7 +8,7 @@ const About = () => {
       className=" bg-neutral-50 text-slate-900 dark:bg-slate-900 "
     >
       <Slider />
-      <div className="container m-auto max-w-3xl p-2 md:py-[7rem]">
+      <div className="container m-auto max-w-3xl p-2 py-[5rem] md:py-[7rem]">
         <h3
           className="mb-4 text-center text-lg font-light uppercase tracking-wide 
         text-purple-900 dark:text-purple-400 md:text-xl"
