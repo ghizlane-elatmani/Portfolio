@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { FaPaperPlane } from "react-icons/fa";
+import backgroundImg from "../assets/backgroundImg.jpg";
 
 const Contact = () => {
   const form = useRef();
@@ -30,16 +31,16 @@ const Contact = () => {
   return (
     <section
       name="contact"
-      // style={{
-      //   backgroundImage: `url(${backgroundImg})`,
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center",
-      // }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3)), url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
       <div className="container m-auto max-w-4xl p-2 py-[4rem] xl:py-[7rem]">
         <form
-          className="m-auto flex max-w-md flex-col gap-5 rounded-lg bg-neutral-100 px-5 py-9 dark:bg-neutral-700"
+          className="m-auto flex max-w-md flex-col gap-5 rounded-lg bg-neutral-100 px-5 py-9 dark:bg-slate-800"
           ref={form}
           onSubmit={sendEmail}
         >
@@ -55,7 +56,7 @@ const Contact = () => {
               Name
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3 leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50 "
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3 leading-tight text-slate-700 shadow focus:outline-none dark:border-neutral-700 dark:bg-slate-900 dark:text-slate-50 "
               id="input-name"
               placeholder="Name"
               type="text"
@@ -71,7 +72,7 @@ const Contact = () => {
               Email
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3  leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50"
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3  leading-tight text-slate-700 shadow focus:outline-none dark:border-neutral-700 dark:bg-slate-900 dark:text-slate-50"
               id="input-email"
               placeholder="Email"
               type="email"
@@ -87,24 +88,20 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3  leading-tight text-slate-700 shadow focus:outline-none dark:border-blue-900 dark:bg-slate-900 dark:text-slate-50"
+              className="focus:shadow-outline w-full appearance-none rounded border border-neutral-400/50 py-2 px-3 leading-tight text-slate-700 shadow focus:outline-none dark:border-neutral-700 dark:bg-slate-900 dark:text-slate-50"
               id="input-msg"
               placeholder="Message"
               name="message"
             />
           </div>
 
-          <div
-            className="m-auto mt-6 flex max-w-min items-center gap-2 justify-self-center rounded-lg bg-blue-400 px-5 py-2 text-blue-50 hover:bg-blue-500 dark:bg-indigo-400 dark:text-blue-50 dark:hover:bg-indigo-500"
+          <button
+            className="group m-auto mt-6 flex max-w-min items-center gap-2 justify-self-center rounded-lg bg-blue-300 px-5 py-2 text-slate-800 hover:bg-blue-400 dark:bg-blue-600 dark:text-blue-50 dark:text-blue-50 dark:hover:bg-blue-700"
             type="submit"
           >
-            <FaPaperPlane />
-            <input
-              className="flex-1 cursor-pointer"
-              type="submit"
-              value="Send"
-            />
-          </div>
+            Send
+            <FaPaperPlane className="duration-300 group-hover:rotate-45" />
+          </button>
         </form>
       </div>
     </section>
