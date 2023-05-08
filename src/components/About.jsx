@@ -5,14 +5,11 @@ const About = () => {
   return (
     <section
       name="about"
-      className=" bg-neutral-50 text-slate-900 dark:bg-slate-900 "
+      className=" bg-zinc-100 text-slate-900 dark:bg-zinc-900 "
     >
       <Slider />
       <div className="container m-auto max-w-3xl p-2 py-[5rem] md:py-[7rem]">
-        <h3
-          className="mb-4 text-center text-lg font-light uppercase tracking-wide 
-        text-purple-900 dark:text-purple-400 md:text-xl"
-        >
+        <h3 className="mb-10 text-center text-lg uppercase tracking-wide text-purple-900 dark:text-purple-400 md:text-xl">
           About me
         </h3>
 

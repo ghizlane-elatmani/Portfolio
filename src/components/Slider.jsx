@@ -5,7 +5,7 @@ const Slider = () => {
   return (
     <div className="bg-neutral-200 dark:bg-neutral-700">
       <div className="container m-auto max-w-4xl py-10 lg:max-w-5xl">
-        <h2 className="mb-4 text-center text-xl dark:text-neutral-50 ">
+        <h2 className="mb-4 text-center text-lg uppercase tracking-wide  dark:text-neutral-50 md:text-xl ">
           My Skills
         </h2>
         <div
@@ -16,7 +16,8 @@ const Slider = () => {
           <div className="logos-slide">
             {languages.map((item) => (
               <img
-                className=" mx-2.5 inline-block h-[110px] rounded-lg"
+                key={item.id}
+                className=" mx-2.5 inline-block h-[90px] rounded-lg md:h-[110px]"
                 src={item.img}
                 alt="/"
               />

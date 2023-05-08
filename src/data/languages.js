@@ -52,84 +52,84 @@ export const languages = [
   },
   // Repeat the same array to have an "infinite loop"
   {
-    id: 1.1,
+    id: 11,
     img: react,
   },
   {
-    id: 2,
+    id: 12,
     img: next,
   },
   {
-    id: 3.1,
+    id: 13,
     img: javascript,
   },
   {
-    id: 4.1,
+    id: 14,
     img: typescript,
   },
   {
-    id: 5.1,
+    id: 15,
     img: html,
   },
   {
-    id: 6.1,
+    id: 16,
     img: css,
   },
   {
-    id: 7.1,
+    id: 17,
     img: tailwindcss,
   },
   {
-    id: 8.1,
+    id: 18,
     img: java,
   },
   {
-    id: 9.1,
+    id: 19,
     img: spring,
   },
   {
-    id: 10.1,
+    id: 20,
     img: mysql,
   },
   // Repeat the same array to have an "infinite loop"
   {
-    id: 1.2,
+    id: 21,
     img: react,
   },
   {
-    id: 2.2,
+    id: 22,
     img: next,
   },
   {
-    id: 3.2,
+    id: 23,
     img: javascript,
   },
   {
-    id: 4.2,
+    id: 24,
     img: typescript,
   },
   {
-    id: 5.2,
+    id: 25,
     img: html,
   },
   {
-    id: 6.2,
+    id: 26,
     img: css,
   },
   {
-    id: 7.2,
+    id: 27,
     img: tailwindcss,
   },
   {
-    id: 8.2,
+    id: 28,
     img: java,
   },
   {
-    id: 9.2,
+    id: 29,
     img: spring,
   },
   {
-    id: 10.2,
+    id: 30,
     img: mysql,
   },
 ];

@@ -17,7 +17,7 @@ const Home = () => {
           - Web Developer -
         </h3>
 
-        <p className="mb-6 max-w-prose text-base text-neutral-600 dark:text-neutral-300 md:w-[50ch] md:text-lg">
+        <p className="mb-10 max-w-prose text-base text-neutral-600 dark:text-neutral-300 md:w-[50ch] md:text-lg">
           I'm a web developer based in Rabat (Morocco), and I'm very passionate
           and dedicated to my work.
         </p>
@@ -26,7 +26,7 @@ const Home = () => {
           <a
             href={resume}
             download="ghizlane-elatmani"
-            className="flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-3 py-1 text-sm font-medium text-neutral-50 shadow-lg shadow-blue-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:shadow-lg dark:shadow-blue-800/80 dark:focus:ring-blue-800 md:px-5 md:py-2 md:text-base"
+            className="flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-3 py-1 text-base font-medium text-neutral-50 shadow-lg shadow-blue-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:shadow-lg dark:shadow-blue-800/80 dark:focus:ring-blue-800 md:px-5 md:py-2 md:text-base"
           >
             <BiCloudDownload />
             Resume
@@ -35,7 +35,7 @@ const Home = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="duration easy-in flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 border-slate-100 px-3 py-1 text-sm text-neutral-900 transition-all hover:border-blue-500 hover:text-blue-500 dark:border-slate-900 dark:text-neutral-50 dark:hover:border-blue-500 dark:hover:text-blue-500 md:px-5 md:py-2 md:text-base"
+            className="duration easy-in flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 border-slate-100 px-3 py-1 text-base text-neutral-900 transition-all hover:border-blue-500 hover:text-blue-500 dark:border-slate-900 dark:text-neutral-50 dark:hover:border-blue-500 dark:hover:text-blue-500 md:px-5 md:py-2 md:text-base"
           >
             <BiDownArrowAlt className="animate-bounce" />
             Contact me
