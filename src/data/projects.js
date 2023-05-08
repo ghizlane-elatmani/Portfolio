@@ -1,8 +1,5 @@
 import weather from "../assets/projects/weather.png";
 import quiz from "../assets/projects/quiz.png";
-import todo from "../assets/todo.png";
-import wind from "../assets/windbnb.png";
-import recipe from "../assets/recipe.png";
 
 export const projectList = [
   {
@@ -35,28 +32,4 @@ export const projectList = [
     urlCode: "https://github.com/ghizlane-elatmani/Country-quiz",
     picture: quiz,
   },
-  // {
-  //   id: "3",
-  //   name: "Todo App",
-  //   desc: "A modern and simple task management app",
-  //   urlSite: "https://todo-app-ge.netlify.app/",
-  //   urlCode: "https://github.com/ghizlane-elatmani/Todo-App",
-  //   picture: todo,
-  // },
-  // {
-  //   id: "4",
-  //   name: "WindBnb",
-  //   desc: "Application that displays a simple version of airbnb",
-  //   urlSite: "https://windbnb-ge.netlify.app/",
-  //   urlCode: "https://github.com/ghizlane-elatmani/Windbnb",
-  //   picture: wind,
-  // },
-  // {
-  //   id: "5",
-  //   name: "Recipe Blog",
-  //   desc: "A homepage designed for a recipe blog",
-  //   urlSite: "https://recipe-blog-ge.netlify.app/",
-  //   urlCode: "https://github.com/ghizlane-elatmani/Recipe-Page",
-  //   picture: recipe,
-  // },
 ];
