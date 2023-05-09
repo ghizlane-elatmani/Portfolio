@@ -20,10 +20,10 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="bg-slate-30 fixed z-40 w-full backdrop-blur-md ">
+    <div className="bg-slate-30 fixed z-40 w-full bg-white/50 drop-shadow-lg backdrop-blur-md dark:bg-slate-900/50">
       <nav className="m-auto max-w-5xl">
         <div className="items-center justify-between py-4 px-6 md:flex md:px-10 ">
-          <div className="cursor-pointer text-lg tracking-wider text-blue-500">
+          <div className="cursor-pointer text-lg font-bold tracking-wider text-blue-700">
             Ghizlane.js
           </div>
 
@@ -35,7 +35,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
           </div>
 
           <ul
-            className={`duration absolute left-0 top-[4rem] z-[-1] w-full rounded-[13px] pb-12 pl-8 transition-all md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+            className={`duration absolute left-0 top-[3.5rem] z-[-1] w-full pb-12 pl-8 transition-all md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
               openMenu
                 ? "min-h-screen bg-white opacity-100 dark:bg-slate-900 md:min-h-0"
                 : "right-[-490px] opacity-0 md:opacity-100"
@@ -49,7 +49,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
                     smooth={true}
                     duration={500}
                     onClick={() => setOpenMenu(false)}
-                    className="duration cursor-pointer text-base text-neutral-600 hover:text-blue-500 dark:text-neutral-50 dark:hover:text-blue-500"
+                    className="duration cursor-pointer text-base text-neutral-900 hover:text-blue-500 dark:text-neutral-50 dark:hover:text-blue-500"
                   >
                     {link.name}
                   </Link>
@@ -59,7 +59,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
 
             <li className="mb-7 md:mb-0 md:ml-8">
               <button
-                className=" flex items-center text-neutral-600 hover:text-blue-500 dark:text-neutral-50 dark:hover:border-amber-500 dark:hover:text-blue-500"
+                className=" flex items-center text-neutral-900 hover:text-blue-700 dark:text-neutral-50 dark:hover:border-amber-500 dark:hover:text-blue-500"
                 onClick={() => handleThemeSwitch()}
               >
                 {theme === "light" ? <BsSunFill /> : <BsFillMoonStarsFill />}
@@ -72,7 +72,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsGithub className=" duration text-neutral-600 transition-all hover:text-blue-500 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
+                <BsGithub className=" duration text-neutral-900 transition-all hover:text-blue-700 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
               </a>
             </li>
 
@@ -82,7 +82,7 @@ const Navbar = ({ theme, handleThemeSwitch }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsLinkedin className="duration text-neutral-600 transition-all hover:text-blue-500 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
+                <BsLinkedin className="duration text-neutral-900 transition-all hover:text-blue-700 hover:text-amber-500 dark:text-neutral-50 dark:hover:text-blue-500" />
               </a>
             </li>
           </ul>
