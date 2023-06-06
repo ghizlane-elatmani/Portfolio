@@ -1,55 +1,34 @@
-<!-- Please update value in the {}  -->
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h1 align="center">My Portfolio</h1>
+## Getting Started
 
-<div align="center">
-  <h3>
-    <a href="https://ghizlane-dev.netlify.app/">
-      Website
-    </a>
-    <span> | </span>
-    <a href="https://github.com/ghizlane-elatmani/Portfolio">
-      Code
-    </a>
-    
-  </h3>
-</div>
+First, run the development server:
 
-<!-- TABLE OF CONTENTS -->
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## Table of Contents
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-<!-- OVERVIEW -->
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Overview
+## Learn More
 
-![My Image](src/assets/overview.png)
+To learn more about Next.js, take a look at the following resources:
 
-- You can see my website here: "https://ghizlane-dev.netlify.app/"
-- In this project, I learn how to make beautiful portfolio.
-- I hope to make more beautifuls websites and become an expert in front-end developmemt :)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Built With
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-- [ReactJS]
-- [Tailwind CSS]
-- [EmailJS]
+## Deploy on Vercel
 
-## Acknowledgements
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
-- [React Icons]
-- [React Scroll]
-
-## Contact
-
-- Website [ghizlane-dev](https://ghizlane-dev.netlify.app/)
-- GitHub [@ghizlane-elatmani](https://github.com/ghizlane-elatmani)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
