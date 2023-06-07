@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Ticker from "./Ticker";
+import Ticker from "framer-motion-ticker";
 import Image from "next/image";
 
 const Skills = () => {
@@ -19,7 +19,8 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-black py-[5rem]">
+    <div className="bg-black text-white py-[5rem]">
+      <h2>Our services</h2>
       <Ticker
         duration={10}
         onMouseEnter={() => setIsPlaying(false)}
