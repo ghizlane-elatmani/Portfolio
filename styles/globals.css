@@ -85,3 +85,18 @@ body {
 .skills {
   background-color: var(--color-black);
 }
+
+.card {
+  margin: 5px;
+  height: 255px;
+  width: 200px;
+  border: 1px solid #1d1d1d;
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.card:hover {
+  border: 1px solid #a1a1a1;
+  transition: all 300ms ease;
+}
