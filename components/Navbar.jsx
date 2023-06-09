@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="flex h-[60px] sm:h-[70px] items-center justify-between px-2 text-white sm:px-4">
       <div className="flex items-center">
-        <Image src="/logo.png" width={150} height={120} alt="Logo" />
+        <Image src="/slash.png" width={170} height={90} alt="Logo" />
       </div>
 
       <nav className="hidden sm:block">
@@ -44,7 +44,7 @@ const Navbar = () => {
             initial={{ x: "110%" }}
             animate={{ x: "0%" }}
             exit={{ x: "110%" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             className="absolute top-0 left-0 flex h-full w-full flex-col bg-black"
           >
             <button
