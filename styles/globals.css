@@ -14,6 +14,15 @@
   --color-black: #1d1d1d;
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Prevents overflow on the x-axis */
+  overflow-x: hidden;
+}
+
 body {
   background-image: linear-gradient(to right, #141e30, #243b55);
   font-family: "Raleway", sans-serif;
@@ -64,6 +73,17 @@ body {
 
 .text-desc {
   max-width: 70ch;
+}
+
+/* ============ Navigation ============ */
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  background-color: #1d1d1d;
 }
 
 /* ============ BTN ============ */

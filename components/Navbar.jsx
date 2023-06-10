@@ -1,18 +1,84 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { BsList, BsXLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
+const navbarVariants = {
+  initial: { y: "-100px", opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
+
+const pathVariants = {
+  initial: { opacity: 0, pathLength: 0 },
+  animate: {
+    opacity: 1,
+    pathLength: 1,
+    transition: { duration: 2, ease: "easeInOut", delay: 0.3 },
+  },
+};
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  function handleClick() {
+    setOpen(true);
+  }
+
   return (
-    <div className="flex h-[60px] sm:h-[70px] items-center justify-between px-2 text-white sm:px-4">
-      <div className="flex items-center">
-        <Image src="/slash.png" width={170} height={90} alt="Logo" />
+    <motion.div
+      variants={navbarVariants}
+      initial="initial"
+      animate="animate"
+      className="flex h-[60px] sm:h-[70px] items-center justify-between px-2 text-white sm:px-4"
+    >
+      <div className="flex items-center gap-3">
+        <motion.svg
+          width="50"
+          height="50"
+          viewBox="0 0 133 128"
+          fill="none"
+          strokeWidth="5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.rect
+            x="34.5"
+            y="1.5"
+            width="97"
+            height="97"
+            rx="8.5"
+            stroke="white"
+            variants={pathVariants}
+            initial="initial"
+            animate="animate"
+          />
+          <motion.rect
+            x="83.3554"
+            y="83.5893"
+            width="47"
+            height="47"
+            rx="8.5"
+            transform="rotate(-135 83.3554 83.5893)"
+            fill="white"
+            variants={pathVariants}
+            initial="initial"
+            animate="animate"
+          />
+          <motion.rect
+            x="22.2337"
+            y="62.9996"
+            width="47"
+            height="47"
+            rx="8.5"
+            transform="rotate(25.5 22.2337 62.9996)"
+            stroke="white"
+            variants={pathVariants}
+            initial="initial"
+            animate="animate"
+          />
+        </motion.svg>
+        <p className="text-white font-semibold uppercase">Ghizlane</p>
       </div>
 
       <nav className="hidden sm:block">
@@ -32,7 +98,7 @@ const Navbar = () => {
       <button
         type="button"
         className="flex items-center sm:hidden"
-        onClick={() => setOpen(true)}
+        onClick={() => handleClick()}
       >
         <BsList size={32} />
       </button>
@@ -40,20 +106,21 @@ const Navbar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            key="box"
-            initial={{ x: "110%" }}
-            animate={{ x: "0%" }}
-            exit={{ x: "110%" }}
-            transition={{ duration: 1 }}
-            className="absolute top-0 left-0 flex h-full w-full flex-col bg-black"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="menu"
           >
-            <button
-              type="button"
-              className="flex justify-end p-5"
-              onClick={() => setOpen(false)}
-            >
-              <BsXLg size={32} />
-            </button>
+            <div className="flex justify-end items-center p-5">
+              <button
+                type="button"
+                className="flex justify-center items-center"
+                onClick={() => setOpen(false)}
+              >
+                <BsXLg size={32} />
+              </button>
+            </div>
 
             <div className="flex flex-1 items-center justify-center p-5">
               <ul className="flex flex-col items-center gap-5 text-xl">
@@ -65,7 +132,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
