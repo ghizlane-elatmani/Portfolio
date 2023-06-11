@@ -29,25 +29,25 @@ const Skills = () => {
       variants={containerVariants}
       initial="initial"
       animate="animate"
-      className="bg-blue-950 text-white py-[5rem]"
+      className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-[5rem] 2xl:py-[7rem] px-2"
     >
       <motion.h2
         variants={childVariants}
-        className="text-center font-bold text-xl mb-2 sm:text-4xl"
+        className="text-center font-bold text-xl mb-2 sm:text-4xl "
       >
         My Services
       </motion.h2>
 
       <motion.p
         variants={childVariants}
-        className="text-center uppercase text-sm text-purple-400 mb-12"
+        className="text-center uppercase text-sm text-purple-400 mb-12 font-semibold"
       >
         What I do for you
       </motion.p>
 
       <motion.div
         variants={childVariants}
-        className="flex gap-10 flex-wrap justify-center max-w-5xl m-auto"
+        className="flex gap-10 flex-wrap justify-center max-w-6xl m-auto"
       >
         <Feature
           icon="/features/icons8-design-100.png"
