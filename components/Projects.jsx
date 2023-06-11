@@ -21,14 +21,14 @@ const Projects = () => {
   return (
     <section className="py-[5rem] px-5 sm:px-10 md:py-[10rem] max-w-7xl m-auto">
       <div>
-        <h2 className="text-center text-white font-bold text-xl sm:text-4xl mb-12">
+        <h2 className="text-center text-slate-950 font-bold text-xl sm:text-4xl mb-12">
           My Work
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 cursor-pointer">
           {/* ============ WEATHER APP ============*/}
           <Link href={"https://weather-app-ge.netlify.app/"}>
-            <div className="group bg-blue-gradient rounded-lg px-7 pt-7 shadow-lg">
+            <div className="group bg-blue-gradient rounded-lg px-7 pt-7 shadow-lg border-2 border-white">
               <div className="flex justify-between items-center text-white font-bold text-xl mb-2">
                 <p>Weather App</p>
                 <BsFillArrowRightCircleFill className="text-neutral-300 group-hover:translate-x-1 group-hover:text-white duration-100" />
@@ -54,7 +54,7 @@ const Projects = () => {
             href={"https://country-quiz-ge.netlify.app/"}
             className="md:col-span-2"
           >
-            <div className="group bg-purple-gradient rounded-lg px-7 py-7 shadow-lg">
+            <div className="group bg-purple-gradient rounded-lg px-7 py-7 shadow-lg border-2 border-white">
               <div className="flex justify-between items-center text-white font-bold text-xl mb-2">
                 <p>Country Quiz</p>
                 <BsFillArrowRightCircleFill className="text-neutral-300 group-hover:translate-x-1 group-hover:text-white duration-100" />
@@ -90,7 +90,7 @@ const Projects = () => {
             href={"https://windbnb-ge.netlify.app/"}
             className=" md:col-span-2"
           >
-            <div className="group bg-silver-gradient rounded-lg pt-7 shadow-lg ">
+            <div className="group bg-silver-gradient rounded-lg pt-7 shadow-lg border-2 border-white">
               <div className="flex justify-between items-center text-slate-900 px-7 font-bold text-xl mb-2">
                 <p>Windbnb</p>
                 <BsFillArrowRightCircleFill className="text-neutral-600 group-hover:translate-x-1 group-hover:text-slate-900 duration-100" />
@@ -110,7 +110,7 @@ const Projects = () => {
 
           {/* ============ TODO APP ============ */}
           <Link href={"https://todo-app-ge.netlify.app/"}>
-            <div className="group bg-blue-2-gradient overflow-hidden rounded-lg pt-7 shadow-lg">
+            <div className="group bg-blue-2-gradient overflow-hidden rounded-lg pt-7 shadow-lg border-2 border-white">
               <div className="flex justify-between items-center text-white font-bold text-xl mb-2 px-7">
                 <p>Todo App</p>
                 <BsFillArrowRightCircleFill className="text-neutral-300 group-hover:translate-x-1 group-hover:text-white duration-100" />

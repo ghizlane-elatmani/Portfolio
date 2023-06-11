@@ -29,18 +29,18 @@ const Skills = () => {
       variants={containerVariants}
       initial="initial"
       animate="animate"
-      className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-[5rem] 2xl:py-[7rem] px-2"
+      className="bg-gradient-to-b from-violet-700 to-white/50 text-white py-[5rem] 2xl:py-[7rem] px-2"
     >
       <motion.h2
         variants={childVariants}
-        className="text-center font-bold text-xl mb-2 sm:text-4xl "
+        className="text-center font-bold text-xl mb-2 sm:mb-4 sm:text-4xl "
       >
         My Services
       </motion.h2>
 
       <motion.p
         variants={childVariants}
-        className="text-center uppercase text-sm text-purple-400 mb-12 font-semibold"
+        className="text-center uppercase text-sm text-violet-100 mb-12 font-bold"
       >
         What I do for you
       </motion.p>
@@ -50,21 +50,21 @@ const Skills = () => {
         className="flex gap-10 flex-wrap justify-center max-w-6xl m-auto"
       >
         <Feature
-          icon="/features/icons8-design-100.png"
+          icon="/features/ux-ui.png"
           title="Web Design"
           description="I can build a template Figma with your instruction."
           color="white"
         />
 
         <Feature
-          icon="/features/icons8-la-programmation-100.png"
+          icon="/features/code.png"
           title="Web Development"
           description="I can developed a website with Next.js, Tailwind CSS and Framer Motion."
           color="purple"
         />
 
         <Feature
-          icon="/features/icons8-iphone-100.png"
+          icon="/features/iphone.png"
           title="App Development"
           description="I can code an Android Application with Java."
           color="white"

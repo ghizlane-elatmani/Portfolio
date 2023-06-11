@@ -30,25 +30,25 @@ const Hero = () => {
       variants={containerVariants}
       initial="initial"
       animate="animate"
-      className="hero flex w-full flex-col items-center justify-center p-4 text-white"
+      className="min-h-screen flex w-full flex-col items-center justify-center p-4 text-slate-950"
     >
       <motion.p
         variants={childVariants}
-        className="mb-2 text-4xl text-center font-semibold sm:text-6xl md:text-7xl 2xl:text-9xl"
+        className="mb-2 text-4xl text-center font-extrabold sm:text-6xl md:text-7xl 2xl:text-9xl"
       >
         A Flawless <span className="text-gradiant">Design</span>.
       </motion.p>
 
       <motion.p
         variants={childVariants}
-        className="text-xl sm:text-2xl 2xl:text-4xl mb-5 text-white/70 "
+        className="text-xl sm:text-2xl 2xl:text-4xl mb-5 text-slate-950/70 "
       >
         Ghizlane EL ATMANI
       </motion.p>
 
       <motion.p
         variants={childVariants}
-        className="text-desc text-center text-base text-white sm:text-lg 2xl:text-xl mb-10"
+        className="text-desc text-center text-sm text-neutral-500 sm:text-lg 2xl:text-xl mb-10 font-semibold"
       >
         I'm a web developer, and I'm very passionate and dedicated to my work. I
         will love to create your website.
@@ -56,18 +56,18 @@ const Hero = () => {
 
       <motion.div
         variants={childVariants}
-        className="flex flex-wrap justify-center gap-2 sm:gap-5"
+        className="flex flex-wrap justify-center gap-2 sm:gap-5 2xl:gap-7"
       >
         <Button
           text="Contact me"
           size="lg"
-          type="bg-white text-slate-950"
+          type="btn-cta text-white"
           goTo="/"
         />
         <Button
           text="Learn More"
           size="lg"
-          type="bg-white/25 text-white"
+          type="bg-white/25 text-slate-950"
           goTo="/"
         />
       </motion.div>
