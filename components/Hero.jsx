@@ -40,19 +40,27 @@ const Hero = () => {
 
       <motion.p
         variants={childVariants}
-        className="text-xl sm:text-2xl 2xl:text-4xl mb-10"
+        className="text-xl sm:text-2xl 2xl:text-4xl mb-5"
       >
         Ghizlane EL ATMANI
       </motion.p>
 
       <motion.p
         variants={childVariants}
-        className="text-desc text-center text-base text-white sm:text-lg 2xl:text-xl"
+        className="text-desc text-center text-base text-white sm:text-lg 2xl:text-xl mb-10"
       >
         I'm a web developer based in Rabat (Morocco), and I'm very passionate
         and dedicated to my work. I develope with Next.js and I will love to
         create your website.
       </motion.p>
+
+      <motion.button
+        variants={childVariants}
+        type="button"
+        className="p-5 text-2xl text-white font-bold bg-blue-500 rounded-xl"
+      >
+        Contact me
+      </motion.button>
     </motion.section>
   );
 };

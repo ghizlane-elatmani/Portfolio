@@ -31,7 +31,7 @@ const Navbar = () => {
       variants={navbarVariants}
       initial="initial"
       animate="animate"
-      className="flex h-[60px] sm:h-[70px] items-center justify-between px-2 text-white sm:px-4"
+      className="flex h-[70px] items-center justify-between px-2 text-white sm:px-4 max-w-7xl lg:max-w-screen-2xl m-auto"
     >
       <div className="flex items-center gap-3">
         <motion.svg
@@ -82,14 +82,14 @@ const Navbar = () => {
       </div>
 
       <nav className="hidden sm:block">
-        <ul className="flex items-center gap-5 font-semibold">
-          <li className="cursor-pointer">
+        <ul className="flex items-center gap-10 font-semibold">
+          <li className="cursor-pointer hover:scale-105 hover:text-blue-400 duration-100">
             <Link href="/">Home</Link>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer hover:scale-105 hover:text-blue-400 duration-100">
             <Link href="/">Projects</Link>
           </li>
-          <li className="btn-cta cursor-pointer rounded-lg px-4 py-2 font-bold">
+          <li className="btn-cta cursor-pointer rounded-lg px-4 py-2 font-bold hover:scale-105 duration-100">
             <Link href="/contact">Contact Me</Link>
           </li>
         </ul>

@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/styles/gradiants.css";
 import Navbar from "@components/Navbar";
 
 export const metadata = {
