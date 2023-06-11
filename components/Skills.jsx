@@ -1,68 +1,76 @@
+"use client";
+import { motion } from "framer-motion";
+import Feature from "./Feature";
+
+const containerVariants = {
+  initial: { y: 10, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
+      when: "beforeChildren",
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const childVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+};
+
 const Skills = () => {
   return (
-    <div className="bg-slate-900 text-white py-[5rem]">
-      <div className="max-w-4xl m-auto ">
-        <h2 className="text-center font-bold text-xl mb-2 sm:text-4xl">
-          Our Services
-        </h2>
-
-        <p className="text-center uppercase text-sm text-purple-400 mb-12">
-          What we do for you
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-slate-100 rounded-lg p-5 min-w-[210px] lg:min-w-[240px] flex flex-col items-center gap-3 cursor-pointer hover:scale-105 duration-75">
-            <div className="border border-slate-700 rounded-full p-2">
-              <img
-                src="/design.png"
-                className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]"
-                alt=""
-              />
-            </div>
-            <p className="text-center font-semibold text-slate-900 lg:text-xl">
-              Design
-            </p>
-          </div>
-
-          <div className="bg-purple-600 rounded-lg p-5 min-w-[210px] lg:min-w-[240px] flex flex-col items-center gap-3 cursor-pointer hover:scale-105 duration-75">
-            <div className="border border-slate-50 bg-purple-100 rounded-full p-2 ">
-              <img
-                src="/frontend.png"
-                className=" w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]"
-                alt=""
-              />
-            </div>
-            <p className="text-center font-semibold lg:text-xl">Front-end</p>
-          </div>
-
-          <div className="bg-slate-100 rounded-lg p-5 min-w-[210px] lg:min-w-[240px] flex flex-col items-center gap-3 cursor-pointer hover:scale-105 duration-75">
-            <div className="border border-slate-700 rounded-full p-2">
-              <img
-                src="/backend.png"
-                className="w-[38px] h-[38px] lg:w-[60px] lg:h-[60px]"
-                alt=""
-              />
-            </div>
-            <p className="text-center font-semibold text-slate-900 lg:text-xl">
-              Back-end
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* <Ticker
-        duration={10}
-        onMouseEnter={() => setIsPlaying(false)}
-        onMouseLeave={() => setIsPlaying(true)}
-        isPlaying={isPlaying}
+    <motion.div
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
+      className="bg-blue-950 text-white py-[5rem]"
+    >
+      <motion.h2
+        variants={childVariants}
+        className="text-center font-bold text-xl mb-2 sm:text-4xl"
       >
-        {skills.map((item, index) => (
-          <div key={index} className="card">
-            <Image src={item} width={200} height={300} />
-          </div>
-        ))}
-      </Ticker> */}
-    </div>
+        My Services
+      </motion.h2>
+
+      <motion.p
+        variants={childVariants}
+        className="text-center uppercase text-sm text-purple-400 mb-12"
+      >
+        What I do for you
+      </motion.p>
+
+      <motion.div
+        variants={childVariants}
+        className="flex gap-10 flex-wrap justify-center max-w-5xl m-auto"
+      >
+        <Feature
+          icon="/features/icons8-design-100.png"
+          title="Web Design"
+          description="I can build a template Figma with your instruction."
+          color="white"
+        />
+
+        <Feature
+          icon="/features/icons8-la-programmation-100.png"
+          title="Web Development"
+          description="I can developed a website with Next.js, Tailwind CSS and Framer Motion."
+          color="purple"
+        />
+
+        <Feature
+          icon="/features/icons8-iphone-100.png"
+          title="App Development"
+          description="I can code an Android Application with Java."
+          color="white"
+        />
+      </motion.div>
+    </motion.div>
   );
 };
 

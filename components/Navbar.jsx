@@ -83,10 +83,10 @@ const Navbar = () => {
 
       <nav className="hidden sm:block">
         <ul className="flex items-center gap-10 font-semibold">
-          <li className="cursor-pointer hover:scale-105 hover:text-blue-400 duration-100">
+          <li className="relative cursor-pointer hover:scale-105 duration-100 before:hidden hover:before:block before:bottom-0 before:absolute before:bg-neon-blue before:w-full before:h-[3px]">
             <Link href="/">Home</Link>
           </li>
-          <li className="cursor-pointer hover:scale-105 hover:text-blue-400 duration-100">
+          <li className="cursor-pointer hover:scale-105 duration-100 before:hidden hover:before:block before:bottom-0 before:absolute before:bg-neon-blue before:w-full before:h-[3px]">
             <Link href="/">Projects</Link>
           </li>
           <li className="btn-cta cursor-pointer rounded-lg px-4 py-2 font-bold hover:scale-105 duration-100">
