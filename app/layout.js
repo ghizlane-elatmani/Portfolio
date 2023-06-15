@@ -1,7 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/gradiants.css";
-import Navbar from "@components/Navbar";
-
 export const metadata = {
   title: "Portfolio - Ghizlane EL ATMANI",
   description:
@@ -12,10 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main id="content">
-          <Navbar />
-          {children}
-        </main>
+        <main id="content">{children}</main>
       </body>
     </html>
   );

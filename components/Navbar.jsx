@@ -3,37 +3,25 @@
 import { useState } from "react";
 import { BsList, BsXLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import { navVariants, pathVariants, menuVariants } from "../utils/motion";
+import styles from "../styles/index.js";
 import Link from "next/link";
-
-const navbarVariants = {
-  initial: { y: "-100px", opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-};
-
-const pathVariants = {
-  initial: { opacity: 0, pathLength: 0 },
-  animate: {
-    opacity: 1,
-    pathLength: 1,
-    transition: { duration: 2, ease: "easeInOut", delay: 0.3 },
-  },
-};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   function handleClick() {
-    setOpen(true);
+    setOpen(!open);
   }
 
   return (
     <motion.div
-      variants={navbarVariants}
-      initial="initial"
-      animate="animate"
-      className="bg-white fixed w-full z-50 shadow-sm"
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className="bg-gradient-to-b from-white to-tranparent w-full "
     >
-      <div className="flex h-[70px] items-center justify-between px-2 text-slate-950 sm:px-4 lg:max-w-screen-2xl max-w-7xl m-auto">
+      <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-2xl max-w-7xl m-auto">
         <div className="flex items-center gap-3">
           <motion.svg
             width="50"
@@ -49,10 +37,10 @@ const Navbar = () => {
               width="97"
               height="97"
               rx="8.5"
-              stroke="black"
+              stroke="#1e293b"
               variants={pathVariants}
-              initial="initial"
-              animate="animate"
+              initial="hidden"
+              animate="show"
             />
             <motion.rect
               x="83.3554"
@@ -61,10 +49,10 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(-135 83.3554 83.5893)"
-              fill="black"
+              fill="#1e293b"
               variants={pathVariants}
-              initial="initial"
-              animate="animate"
+              initial="hidden"
+              animate="show"
             />
             <motion.rect
               x="22.2337"
@@ -73,24 +61,24 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(25.5 22.2337 62.9996)"
-              stroke="black"
+              stroke="#1e293b"
               variants={pathVariants}
-              initial="initial"
-              animate="animate"
+              initial="hidden"
+              animate="show"
             />
           </motion.svg>
-          <p className="text-slate-950 font-semibold uppercase">Ghizlane</p>
+          <p className="text-slate-800 font-semibold uppercase">Ghizlane</p>
         </div>
 
         <nav className="hidden sm:block">
-          <ul className="flex items-center gap-7 font-semibold">
-            <li className="relative cursor-pointer hover:scale-105 duration-100 before:hidden hover:before:block before:bottom-0 before:absolute before:bg-neon-blue before:w-full before:h-[3px]">
-              <Link href="/">Home</Link>
+          <ul className="flex items-center gap-4 font-semibold">
+            <li className={`${styles.navLinks}`}>
+              <a href="#home">Home</a>
             </li>
-            <li className="cursor-pointer hover:scale-105 duration-100 before:hidden hover:before:block before:bottom-0 before:absolute before:bg-neon-blue before:w-full before:h-[3px]">
-              <Link href="/">Projects</Link>
+            <li className={`${styles.navLinks}`}>
+              <a href="#projects">Projects</a>
             </li>
-            <li className="btn-cta cursor-pointer text-white rounded-lg px-4 py-2 font-bold hover:scale-105 duration-100">
+            <li className={`${styles.navLinksGradient}`}>
               <Link href="/contact">Contact Me</Link>
             </li>
           </ul>
@@ -101,29 +89,19 @@ const Navbar = () => {
           className="flex items-center sm:hidden"
           onClick={() => handleClick()}
         >
-          <BsList size={32} />
+          {open ? <BsXLg size={32} /> : <BsList size={32} />}
         </button>
 
         <AnimatePresence>
           {open && (
             <motion.div
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="menu"
+              variants={menuVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="absolute top-[70px] right-0 bg-white"
             >
-              <div className="flex justify-end items-center p-5">
-                <button
-                  type="button"
-                  className="flex justify-center items-center"
-                  onClick={() => setOpen(false)}
-                >
-                  <BsXLg size={32} />
-                </button>
-              </div>
-
-              <div className="flex flex-1 items-center justify-center p-5">
+              <div className="flex items-center justify-center py-10 px-12 rounded-bl-lg">
                 <ul className="flex flex-col items-center gap-5 text-xl">
                   <li>Home</li>
                   <li>Projects</li>
