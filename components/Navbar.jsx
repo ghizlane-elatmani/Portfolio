@@ -73,10 +73,10 @@ const Navbar = () => {
         <nav className="hidden sm:block">
           <ul className="flex items-center gap-4 font-semibold">
             <li className={`${styles.navLinks}`}>
-              <a href="#home">Home</a>
+              <Link href="#home">Home</Link>
             </li>
             <li className={`${styles.navLinks}`}>
-              <a href="#projects">Projects</a>
+              <Link href="#projects">Projects</Link>
             </li>
             <li className={`${styles.navLinksGradient}`}>
               <Link href="/contact">Contact Me</Link>
@@ -103,9 +103,21 @@ const Navbar = () => {
             >
               <div className="flex items-center justify-center py-10 px-12 rounded-bl-lg">
                 <ul className="flex flex-col items-center gap-5 text-xl">
-                  <li>Home</li>
-                  <li>Projects</li>
-                  <li>Contact me</li>
+                  <li className={`${styles.navLinks}`}>
+                    <Link href="#home" onClick={() => setOpen(false)}>
+                      Home
+                    </Link>
+                  </li>
+                  <li className={`${styles.navLinks}`}>
+                    <Link href="#projects" onClick={() => setOpen(false)}>
+                      Projects
+                    </Link>
+                  </li>
+                  <li className={`${styles.navLinksGradient}`}>
+                    <Link href="/contact" onClick={() => setOpen(false)}>
+                      Contact Me
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </motion.div>

@@ -26,13 +26,13 @@ const CallToAction = () => {
             text="Contact me"
             size="sm"
             type="bg-white text-slate-950"
-            goTo="/"
+            goTo="/contact"
           />
           <Button
             text="Learn More"
             size="sm"
             type="bg-white/25 text-white"
-            goTo="/"
+            goTo="#projects"
           />
         </motion.div>
       </motion.div>
