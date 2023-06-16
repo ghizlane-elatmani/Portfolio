@@ -19,9 +19,9 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="bg-gradient-to-b from-white to-tranparent w-full "
+      className="bg-white w-full fixed shadow-sm z-10"
     >
-      <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-2xl max-w-7xl m-auto">
+      <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
         <div className="flex items-center gap-3">
           <motion.svg
             width="50"
@@ -30,6 +30,9 @@ const Navbar = () => {
             fill="none"
             strokeWidth="5"
             xmlns="http://www.w3.org/2000/svg"
+            drag
+            dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+            dragElastic={0.7}
           >
             <motion.rect
               x="34.5"
@@ -71,15 +74,20 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden sm:block">
-          <ul className="flex items-center gap-4 font-semibold">
+          <ul className="flex items-center gap-3 font-semibold">
             <li className={`${styles.navLinks}`}>
               <Link href="#home">Home</Link>
+            </li>
+            <li className={`${styles.navLinks}`}>
+              <Link href="#services" onClick={() => setOpen(false)}>
+                Services
+              </Link>
             </li>
             <li className={`${styles.navLinks}`}>
               <Link href="#projects">Projects</Link>
             </li>
             <li className={`${styles.navLinksGradient}`}>
-              <Link href="/contact">Contact Me</Link>
+              <Link href="#contact">Contact Me</Link>
             </li>
           </ul>
         </nav>
@@ -96,7 +104,7 @@ const Navbar = () => {
           {open && (
             <motion.div
               variants={menuVariants}
-              initial="initial"
+              initial="hidden"
               animate="animate"
               exit="exit"
               className="absolute top-[70px] right-0 bg-white"
@@ -109,12 +117,17 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className={`${styles.navLinks}`}>
+                    <Link href="#services" onClick={() => setOpen(false)}>
+                      Services
+                    </Link>
+                  </li>
+                  <li className={`${styles.navLinks}`}>
                     <Link href="#projects" onClick={() => setOpen(false)}>
                       Projects
                     </Link>
                   </li>
                   <li className={`${styles.navLinksGradient}`}>
-                    <Link href="/contact" onClick={() => setOpen(false)}>
+                    <Link href="#contact" onClick={() => setOpen(false)}>
                       Contact Me
                     </Link>
                   </li>

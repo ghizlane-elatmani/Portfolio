@@ -4,6 +4,7 @@ import Link from "next/link";
 const buttonVariants = {
   onHover: {
     scale: 1.1,
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
     transition: {
       duration: 0.3,
     },
@@ -13,7 +14,7 @@ const buttonVariants = {
 const Button = ({ text, size, type, goTo }) => {
   const sm = "text-xs sm:text-base 2xl:text-lg py-2 px-5";
   const lg =
-    "text-base sm:text-lg 2xl:text-2xl 2xl:py-4 2xl:px-7 sm:py-2.5 sm:px-6 py-3 px-4 shadow-lg";
+    "text-lg sm:text-2xl 2xl:text-3xl 2xl:py-6 2xl:px-9 sm:py-5 sm:px-8 py-3 px-4 my-shadow";
 
   return (
     <motion.button

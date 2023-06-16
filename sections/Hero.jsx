@@ -8,6 +8,7 @@ import Button from "@components//Button";
 const Hero = () => {
   return (
     <motion.section
+      id="home"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
@@ -29,21 +30,12 @@ const Hero = () => {
         will love to create your website.
       </motion.p>
 
-      <motion.div
-        variants={childVariants}
-        className="flex flex-wrap justify-center gap-2 sm:gap-5 2xl:gap-7 mb-12"
-      >
+      <motion.div variants={childVariants} className="">
         <Button
           text="Contact me"
           size="lg"
           type="bg-gradient-to-r from-cyan-custom to-purple-custom text-white"
-          goTo="/contact"
-        />
-        <Button
-          text="Learn More"
-          size="lg"
-          type="bg-white/25 text-slate-800"
-          goTo="#projects"
+          goTo="#contact"
         />
       </motion.div>
     </motion.section>

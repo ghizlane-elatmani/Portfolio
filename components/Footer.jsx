@@ -9,20 +9,29 @@ const Footer = () => {
 
         <div className="flex gap-4">
           <button type="button">
-            <Link href="/">
-              <BsLinkedin size={24} className="text-white" />
+            <Link href="https://www.linkedin.com/in/ghizlane-el-atmani-a91732214/">
+              <BsLinkedin
+                size={24}
+                className="text-white hover:text-neon-blue hover:scale-105 duration-75"
+              />
             </Link>
           </button>
 
           <button type="button">
-            <Link href="/">
-              <BsGithub size={24} className="text-white" />
+            <Link href="https://github.com/ghizlane-elatmani">
+              <BsGithub
+                size={24}
+                className="text-white hover:text-neon-blue hover:scale-105 duration-75"
+              />
             </Link>
           </button>
 
           <button type="button">
-            <Link href="/">
-              <img src="/group.svg" className="text-white h-[24px]" />
+            <Link href="#home">
+              <img
+                src="/group.svg"
+                className="text-white h-[24px] hover:text-neon-blue hover:scale-105 duration-75"
+              />
             </Link>
           </button>
         </div>

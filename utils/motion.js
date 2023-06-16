@@ -21,7 +21,6 @@ export const pathVariants = {
 };
 
 export const menuVariants = {
-  hidden: { y: -500, opacity: 0 },
   show: {
     y: 0,
     opacity: 1,

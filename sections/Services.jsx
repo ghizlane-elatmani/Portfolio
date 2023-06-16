@@ -11,7 +11,10 @@ import {
 
 const Services = () => {
   return (
-    <section className="bg-gradient-to-b from-violet-700 to-transparent text-white py-[5rem] sm:py-[8rem] 2xl:py-[12rem] px-2">
+    <section
+      className="bg-gradient-to-b from-violet-700 to-transparent text-white py-[5rem] sm:py-[8rem] 2xl:py-[12rem] px-2"
+      id="services"
+    >
       <motion.div
         variants={staggerContainer}
         initial="hidden"

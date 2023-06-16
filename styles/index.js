@@ -2,7 +2,7 @@ const styles = {
   flexCenter: "flex justify-center items-center",
 
   navLinks:
-    "text-slate-800 cursor-pointer duration-100 hover:scale-105 hover:bg-neutral-100 py-2 px-4 rounded-xl",
+    "text-slate-800 cursor-pointer duration-100 hover:scale-105 hover:bg-neutral-200 py-2 px-4 rounded-xl",
   navLinksGradient:
     "text-slate-50 cursor-pointer duration-100 hover:scale-105 py-2 px-4 rounded-xl bg-gradient-to-r from-cyan-custom to-purple-custom font-bold",
 
