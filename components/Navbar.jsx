@@ -110,24 +110,24 @@ const Navbar = () => {
               <div className="flex items-center justify-center py-10 px-12 rounded-bl-lg">
                 <ul className="flex flex-col items-center gap-5 text-xl">
                   <li className={`${styles.navLinks}`}>
-                    <Link href="#home" onClick={() => setOpen(false)}>
+                    <a href="#home" onClick={() => setOpen(false)}>
                       Home
-                    </Link>
+                    </a>
                   </li>
                   <li className={`${styles.navLinks}`}>
-                    <Link href="#services" onClick={() => setOpen(false)}>
+                    <a href="#services" onClick={() => setOpen(false)}>
                       Services
-                    </Link>
+                    </a>
                   </li>
                   <li className={`${styles.navLinks}`}>
-                    <Link href="#projects" onClick={() => setOpen(false)}>
+                    <a href="#projects" onClick={() => setOpen(false)}>
                       Projects
-                    </Link>
+                    </a>
                   </li>
                   <li className={`${styles.navLinksGradient}`}>
-                    <Link href="#contact" onClick={() => setOpen(false)}>
+                    <a href="#contact" onClick={() => setOpen(false)}>
                       Contact Me
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>

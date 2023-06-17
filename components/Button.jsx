@@ -22,7 +22,7 @@ const Button = ({ text, size, type, goTo }) => {
       whileHover="onHover"
       className={`${type} font-bold rounded-lg ${size === "lg" ? lg : sm}`}
     >
-      <Link href={goTo}> {text}</Link>
+      <a href={goTo}> {text}</a>
     </motion.button>
   );
 };
