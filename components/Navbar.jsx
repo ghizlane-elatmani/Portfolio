@@ -76,18 +76,16 @@ const Navbar = () => {
         <nav className="hidden sm:block">
           <ul className="flex items-center gap-3 font-semibold">
             <li className={`${styles.navLinks}`}>
-              <Link href="#home">Home</Link>
+              <a href="#home">Home</a>
             </li>
             <li className={`${styles.navLinks}`}>
-              <Link href="#services" onClick={() => setOpen(false)}>
-                Services
-              </Link>
+              <a href="#services">Services</a>
             </li>
             <li className={`${styles.navLinks}`}>
-              <Link href="#projects">Projects</Link>
+              <a href="#projects">Projects</a>
             </li>
             <li className={`${styles.navLinksGradient}`}>
-              <Link href="#contact">Contact Me</Link>
+              <a href="#contact">Contact Me</a>
             </li>
           </ul>
         </nav>
