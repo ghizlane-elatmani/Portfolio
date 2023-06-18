@@ -2,9 +2,9 @@ const styles = {
   flexCenter: "flex justify-center items-center",
 
   navLinks:
-    "text-white cursor-pointer duration-100 hover:scale-105 rounded-xl font-bold hover:underline hover:underline-offset-4",
+    "cursor-pointer duration-100 hover:scale-105 rounded-xl font-bold hover:underline hover:underline-offset-4",
   navLinksCTA:
-    "text-white cursor-pointer duration-100 hover:scale-105 py-2 px-4 rounded-lg bg-transparent border border-white font-bold hover:bg-white hover:text-neon-blue",
+    "cursor-pointer duration-100 hover:scale-105 py-2 px-4 rounded-lg bg-transparent border font-bold",
 
   heading1:
     "text-white mb-2 text-4xl text-center font-extrabold sm:text-6xl md:text-7xl tracking-wide",

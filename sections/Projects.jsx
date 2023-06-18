@@ -36,7 +36,7 @@ const Projects = () => {
 
         <motion.p
           variants={textVariants3}
-          className={`${styles.subtitle} text-indigo-700`}
+          className={`${styles.subtitle} text-indigo-400`}
         >
           Projects
         </motion.p>
@@ -44,10 +44,9 @@ const Projects = () => {
         <motion.div className="flex flex-col gap-5 cursor-pointer ">
           <Project
             title="Weather App"
-            desc="Application web developped with React and using the famous API,
-            openWeatherMap."
+            desc="Weather App is a web application developped with the famous library React and communicating with the API openWeatherMap."
             url="https://weather-app-ge.netlify.app/"
-            image="/projects/weather.svg"
+            image="projects/project-weather.png"
             tags={[
               { id: 1, title: "React" },
               { id: 2, title: "Tailwind CSS" },
@@ -62,15 +61,16 @@ const Projects = () => {
 
           <Project
             title="Country Quiz"
-            desc="Country Quiz is web application developped with React and using the famous API rest countries."
+            desc="Country Quiz is web application developped with React. There are two types of questions: a city is the capital of... or a flag belong to country..."
             url="https://country-quiz-ge.netlify.app/"
-            image="/projects/country-quiz.svg"
+            image="/projects/project-quiz.png"
             tags={[
               { id: 1, title: "React" },
               { id: 2, title: "API: Restcountries" },
-              { id: 3, title: "Javascript" },
-              { id: 4, title: "HTML" },
-              { id: 5, title: "CSS" },
+              { id: 3, title: "SCSS" },
+              { id: 4, title: "Javascript" },
+              { id: 5, title: "HTML" },
+              { id: 6, title: "CSS" },
             ]}
             index={2}
             direction="right"
@@ -78,9 +78,9 @@ const Projects = () => {
 
           <Project
             title="Windbnb"
-            desc="Windbnb is an application web developped with React."
+            desc="Windbnb is a web application developped with React and inspired by the UI of airbnb, modern and clean."
             url="https://windbnb-ge.netlify.app/"
-            image="/projects/windbnb.svg"
+            image="/projects/project-windbnb.png"
             tags={[
               { id: 1, title: "React" },
               { id: 2, title: "Javascript" },
@@ -93,9 +93,9 @@ const Projects = () => {
 
           <Project
             title="Todo App"
-            desc="Todo App is a task management application developped with React."
+            desc="Todo App is a task management application developped with React. The task are stored in the local storage that when the user refresh the page he can still see his progress."
             url="https://todo-app-ge.netlify.app/"
-            image="/projects/group.svg"
+            image="/projects/project-todo.png"
             tags={[
               { id: 1, title: "React" },
               { id: 2, title: "Javascript" },

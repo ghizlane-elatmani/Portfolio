@@ -9,6 +9,17 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [colorChange, setColorchange] = useState(false);
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 120) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbarColor);
 
   function handleClick() {
     setOpen(!open);
@@ -19,9 +30,11 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className=" w-full fixed z-10"
+      className={`${
+        colorChange ? "bg-white" : "bg-transparent"
+      } w-full fixed z-10 duration-75`}
     >
-      <div className="flex h-[90px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
+      <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
         <div className="flex items-center gap-3">
           <motion.svg
             width="50"
@@ -40,7 +53,7 @@ const Navbar = () => {
               width="97"
               height="97"
               rx="8.5"
-              stroke="#fff"
+              stroke={`${colorChange ? "#172554" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -52,7 +65,7 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(-135 83.3554 83.5893)"
-              fill="#fff"
+              fill={`${colorChange ? "#172554" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -64,27 +77,51 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(25.5 22.2337 62.9996)"
-              stroke="#fff"
+              stroke={`${colorChange ? "#172554" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
             />
           </motion.svg>
-          <p className="text-white font-semibold uppercase">Ghizlane</p>
+          <p
+            className={`${
+              colorChange ? "text-blue-950" : "text-white"
+            }  font-semibold uppercase`}
+          >
+            Ghizlane
+          </p>
         </div>
 
         <nav className="hidden sm:block">
           <ul className="flex items-center gap-5 font-semibold">
-            <li className={`${styles.navLinks}`}>
+            <li
+              className={`${styles.navLinks} ${
+                colorChange ? "text-blue-950" : "text-white"
+              }`}
+            >
               <a href="#home">Home</a>
             </li>
-            <li className={`${styles.navLinks}`}>
+            <li
+              className={`${styles.navLinks} ${
+                colorChange ? "text-blue-950" : "text-white"
+              }`}
+            >
               <a href="#services">Services</a>
             </li>
-            <li className={`${styles.navLinks}`}>
+            <li
+              className={`${styles.navLinks} ${
+                colorChange ? "text-blue-950" : "text-white"
+              }`}
+            >
               <a href="#projects">Projects</a>
             </li>
-            <li className={`${styles.navLinksCTA}`}>
+            <li
+              className={`${styles.navLinksCTA} ${
+                colorChange
+                  ? "text-blue-950 border-blue-950 hover:text-white hover:bg-neon-blue hover:border-neon-blue"
+                  : "text-white border-white hover:text-neon-blue hover:bg-white"
+              }`}
+            >
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
@@ -92,7 +129,9 @@ const Navbar = () => {
 
         <button
           type="button"
-          className="flex items-center sm:hidden"
+          className={`${
+            colorChange ? "text-blue-950" : "text-white"
+          } flex items-center sm:hidden`}
           onClick={() => handleClick()}
         >
           {open ? <BsXLg size={32} /> : <BsList size={32} />}
@@ -105,26 +144,28 @@ const Navbar = () => {
               initial="hidden"
               animate="animate"
               exit="exit"
-              className="absolute top-[70px] right-0 bg-white"
+              className="absolute top-[70px] right-0 bg-white rounded-lg text-blue-950"
             >
               <div className="flex items-center justify-center py-10 px-12 rounded-bl-lg">
                 <ul className="flex flex-col items-center gap-5 text-xl">
-                  <li className={`${styles.navLinks}`}>
+                  <li className={`${styles.navLinks} font-medium`}>
                     <a href="#home" onClick={() => setOpen(false)}>
                       Home
                     </a>
                   </li>
-                  <li className={`${styles.navLinks}`}>
+                  <li className={`${styles.navLinks} font-medium`}>
                     <a href="#services" onClick={() => setOpen(false)}>
                       Services
                     </a>
                   </li>
-                  <li className={`${styles.navLinks}`}>
+                  <li className={`${styles.navLinks} font-medium`}>
                     <a href="#projects" onClick={() => setOpen(false)}>
                       Projects
                     </a>
                   </li>
-                  <li className={`${styles.navLinksGradient}`}>
+                  <li
+                    className={`${styles.navLinksCTA} border-blue-950 hover:bg-neon-blue hover:text-white hover:border-white`}
+                  >
                     <a href="#contact" onClick={() => setOpen(false)}>
                       Contact Me
                     </a>

@@ -8,14 +8,14 @@ const Project = ({ title, desc, url, image, tags, index, direction }) => {
   return (
     <motion.div variants={fadeIn(direction, "spring", index * 0.5, 0.75)}>
       <Link href={url}>
-        <div className="group border border-white overflow-hidden flex justify-between rounded-lg">
+        <div className="group border border-white overflow-hidden flex flex-col sm:flex-row justify-between rounded-lg">
           {/* IMAGE */}
-          <div className="w-[30%] object-cover">
-            {/* <img src={image} className="w-full" alt="" /> */}
+          <div className="sm:w-[35%] object-cover flex items-center justify-center sm:pl-7 sm:py-7 p-5">
+            <img src={image} className="w-full" alt="" />
           </div>
 
           {/* CONTENT */}
-          <div className="w-[70%] px-7 py-7">
+          <div className="sm:w-[70%] px-7 py-7">
             <p className="uppercase mb-2 font-bold text-blue-300">
               project {index}
             </p>
@@ -25,7 +25,9 @@ const Project = ({ title, desc, url, image, tags, index, direction }) => {
               <BsFillArrowRightCircleFill className="group-hover:translate-x-1 group-hover:text-white duration-100 text-slate-200" />
             </div>
 
-            <p className="text-base mb-4 font-medium text-white">{desc}</p>
+            <p className="text-base mb-4 font-medium text-white max-w-[50ch]">
+              {desc}
+            </p>
 
             <div className="flex flex-wrap gap-2 ">
               {tags.map((tag, index) => (
