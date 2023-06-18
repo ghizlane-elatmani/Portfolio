@@ -19,9 +19,9 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="bg-white w-full fixed shadow-sm z-10"
+      className=" w-full fixed z-10"
     >
-      <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
+      <div className="flex h-[90px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
         <div className="flex items-center gap-3">
           <motion.svg
             width="50"
@@ -40,7 +40,7 @@ const Navbar = () => {
               width="97"
               height="97"
               rx="8.5"
-              stroke="#1e293b"
+              stroke="#fff"
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -52,7 +52,7 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(-135 83.3554 83.5893)"
-              fill="#1e293b"
+              fill="#fff"
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -64,17 +64,17 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(25.5 22.2337 62.9996)"
-              stroke="#1e293b"
+              stroke="#fff"
               variants={pathVariants}
               initial="hidden"
               animate="show"
             />
           </motion.svg>
-          <p className="text-slate-800 font-semibold uppercase">Ghizlane</p>
+          <p className="text-white font-semibold uppercase">Ghizlane</p>
         </div>
 
         <nav className="hidden sm:block">
-          <ul className="flex items-center gap-3 font-semibold">
+          <ul className="flex items-center gap-5 font-semibold">
             <li className={`${styles.navLinks}`}>
               <a href="#home">Home</a>
             </li>
@@ -84,7 +84,7 @@ const Navbar = () => {
             <li className={`${styles.navLinks}`}>
               <a href="#projects">Projects</a>
             </li>
-            <li className={`${styles.navLinksGradient}`}>
+            <li className={`${styles.navLinksCTA}`}>
               <a href="#contact">Contact Me</a>
             </li>
           </ul>

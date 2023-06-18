@@ -14,7 +14,7 @@ const buttonVariants = {
 const Button = ({ text, size, type, goTo }) => {
   const sm = "text-xs sm:text-base 2xl:text-lg py-2 px-5";
   const lg =
-    "text-lg sm:text-2xl 2xl:text-3xl 2xl:py-6 2xl:px-9 sm:py-5 sm:px-8 py-3 px-4 my-shadow";
+    "text-lg sm:text-2xl  2xl:py-6 2xl:px-9 sm:py-5 sm:px-8 py-3 px-4 my-shadow";
 
   return (
     <motion.button

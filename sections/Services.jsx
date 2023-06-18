@@ -12,7 +12,7 @@ import {
 const Services = () => {
   return (
     <section
-      className="bg-gradient-to-b from-violet-700 to-transparent text-white py-[5rem] sm:py-[8rem] 2xl:py-[12rem] px-2"
+      className="text-blue-950 py-[5rem] sm:py-[6rem] 2xl:py-[8rem] mb-[10rem] px-2"
       id="services"
     >
       <motion.div
@@ -23,7 +23,7 @@ const Services = () => {
       >
         <motion.p
           variants={textContainer}
-          className={`${styles.heading4} text-slate-50`}
+          className={`${styles.heading4} text-blue-950`}
         >
           {Array.from("My Services").map((letter, index) => (
             <motion.span variants={textVariants2} key={index}>
@@ -34,17 +34,17 @@ const Services = () => {
 
         <motion.p
           variants={textVariants3}
-          className={`${styles.subtitle} text-violet-100`}
+          className={`${styles.subtitle} text-indigo-500`}
         >
           What I do for you
         </motion.p>
 
-        <motion.div className="flex flex-wrap gap-10 justify-center max-w-6xl m-auto">
+        <motion.div className="my-grid max-w-5xl m-auto">
           <Service
             icon="/features/ux-ui.png"
             title="Web Design"
             description="I can build a template Figma with your instruction."
-            color="white"
+            special={false}
             index={1}
           />
 
@@ -52,7 +52,7 @@ const Services = () => {
             icon="/features/code.png"
             title="Web Development"
             description="I can develope a website with Next.js, Tailwind CSS and Framer Motion."
-            color="purple"
+            special={true}
             index={2}
           />
 
@@ -60,7 +60,7 @@ const Services = () => {
             icon="/features/iphone.png"
             title="App Development"
             description="I can code an Android Application with Java."
-            color="white"
+            special={false}
             index={3}
           />
         </motion.div>

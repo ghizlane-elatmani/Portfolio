@@ -72,7 +72,7 @@ const Forms = ({ setMessage }) => {
       <div>
         <button
           type="submit"
-          className="w-full bg-neon-blue text-white rounded-lg py-2 font-bold"
+          className="w-full bg-transparent text-white border border-white hover:bg-white hover:text-neon-blue rounded-lg py-2 font-bold"
         >
           Send
         </button>

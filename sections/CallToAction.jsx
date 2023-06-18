@@ -11,21 +11,23 @@ const CallToAction = () => {
 
   return (
     <section
-      className=" bg-gradient-to-b from-blue-700 to-cyan-400 flex items-center justify-center min-h-[500px]"
+      className="flex items-center justify-center min-h-[500px] py-[5rem] sm:text-5xl sm:py-[8rem] 2xl:py-[10rem]"
       id="contact"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        className="flex flex-col w-full items-center justify-center text-white font-extrabold text-2xl py-[5rem] sm:text-5xl sm:py-[8rem] 2xl:py-[10rem]"
+        className="bg-neon-blue flex justify-between gap-5 text-white font-extrabold text-2xl rounded-lg p-10"
       >
-        <motion.p variants={childVariants} className="mb-1 sm:mb-2">
-          Ready to start ?
-        </motion.p>
-        <motion.p variants={childVariants} className="mb-10">
-          Send me a message.
-        </motion.p>
+        <div className="">
+          <motion.p variants={childVariants} className="mb-1 sm:mb-2">
+            Ready to start ?
+          </motion.p>
+          <motion.p variants={childVariants} className="mb-10">
+            Send me a message.
+          </motion.p>
+        </div>
 
         <motion.div variants={childVariants}>
           <Forms message={message} setMessage={setMessage} />

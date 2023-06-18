@@ -12,10 +12,13 @@ const Hero = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.flexCenter} w-full min-h-screen flex-col p-4`}
+      className={`flex items-center  w-full min-h-screen flex-col p-4`}
     >
-      <motion.h1 variants={childVariants} className={`${styles.heading1}`}>
-        A Flawless <span className="text-gradient">Design.</span>
+      <motion.h1
+        variants={childVariants}
+        className={`${styles.heading1} mt-[7rem] sm:mt-[9rem] 2xl:mt-[15rem]`}
+      >
+        A Flawless Design.
       </motion.h1>
 
       <motion.h3 variants={childVariants} className={`${styles.heading3}`}>
@@ -34,7 +37,7 @@ const Hero = () => {
         <Button
           text="Contact me"
           size="lg"
-          type="bg-gradient-to-r from-cyan-custom to-purple-custom text-white"
+          type="border border-white text-white hover:bg-white hover:text-neon-blue"
           goTo="#contact"
         />
       </motion.div>
