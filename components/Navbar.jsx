@@ -33,14 +33,14 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       className={`${
-        colorChange ? "bg-white" : "bg-transparent"
+        colorChange ? "bg-white shadow-sm" : "bg-transparent"
       } w-full fixed z-10 duration-75`}
     >
       <div className="flex h-[70px] items-center justify-between px-2 sm:px-4 lg:max-w-screen-xl max-w-7xl m-auto">
         <div className="flex items-center gap-3">
           <motion.svg
-            width="50"
-            height="50"
+            width="40"
+            height="40"
             viewBox="0 0 133 128"
             fill="none"
             strokeWidth="5"
@@ -55,7 +55,7 @@ const Navbar = () => {
               width="97"
               height="97"
               rx="8.5"
-              stroke={`${colorChange ? "#172554" : "#fff"}`}
+              stroke={`${colorChange ? "#2272ff" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -67,7 +67,7 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(-135 83.3554 83.5893)"
-              fill={`${colorChange ? "#172554" : "#fff"}`}
+              fill={`${colorChange ? "#2272ff" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -79,7 +79,7 @@ const Navbar = () => {
               height="47"
               rx="8.5"
               transform="rotate(25.5 22.2337 62.9996)"
-              stroke={`${colorChange ? "#172554" : "#fff"}`}
+              stroke={`${colorChange ? "#2272ff" : "#fff"}`}
               variants={pathVariants}
               initial="hidden"
               animate="show"
@@ -87,8 +87,8 @@ const Navbar = () => {
           </motion.svg>
           <p
             className={`${
-              colorChange ? "text-blue-950" : "text-white"
-            }  font-semibold uppercase`}
+              colorChange ? "text-neon-blue" : "text-white"
+            }  font-bold uppercase`}
           >
             Ghizlane
           </p>
@@ -98,21 +98,21 @@ const Navbar = () => {
           <ul className="flex items-center gap-5 font-semibold">
             <li
               className={`${styles.navLinks} ${
-                colorChange ? "text-blue-950" : "text-white"
+                colorChange ? "text-neon-blue" : "text-white"
               }`}
             >
               <a href="#home">Home</a>
             </li>
             <li
               className={`${styles.navLinks} ${
-                colorChange ? "text-blue-950" : "text-white"
+                colorChange ? "text-neon-blue" : "text-white"
               }`}
             >
               <a href="#services">Services</a>
             </li>
             <li
               className={`${styles.navLinks} ${
-                colorChange ? "text-blue-950" : "text-white"
+                colorChange ? "text-neon-blue" : "text-white"
               }`}
             >
               <a href="#projects">Projects</a>
@@ -120,7 +120,7 @@ const Navbar = () => {
             <li
               className={`${styles.navLinksCTA} ${
                 colorChange
-                  ? "text-blue-950 border-blue-950 hover:text-white hover:bg-neon-blue hover:border-neon-blue"
+                  ? "text-neon-blue border-neon-blue hover:text-white hover:bg-neon-blue"
                   : "text-white border-white hover:text-neon-blue hover:bg-white"
               }`}
             >
@@ -132,7 +132,7 @@ const Navbar = () => {
         <button
           type="button"
           className={`${
-            colorChange ? "text-blue-950" : "text-white"
+            colorChange ? "text-neon-blue" : "text-white"
           } flex items-center sm:hidden`}
           onClick={() => handleClick()}
         >
@@ -146,7 +146,7 @@ const Navbar = () => {
               initial="hidden"
               animate="animate"
               exit="exit"
-              className="absolute top-[70px] right-0 bg-white rounded-lg text-blue-950"
+              className="absolute top-[70px] right-0 bg-white rounded-lg text-neon-blue my-shadow"
             >
               <div className="flex items-center justify-center py-10 px-12 rounded-bl-lg">
                 <ul className="flex flex-col items-center gap-5 text-xl">
@@ -166,7 +166,7 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li
-                    className={`${styles.navLinksCTA} border-blue-950 hover:bg-neon-blue hover:text-white hover:border-white`}
+                    className={`${styles.navLinksCTA} border-neon-blue hover:bg-neon-blue hover:text-white `}
                   >
                     <a href="#contact" onClick={() => setOpen(false)}>
                       Contact Me

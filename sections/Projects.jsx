@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <section
-      className="overflow-hidden bg-gradient-to-b from-blue-900 to-blue-600"
+      className="overflow-hidden bg-gradient-to-b from-blue-600 to-sky-500"
       id="projects"
     >
       <motion.div

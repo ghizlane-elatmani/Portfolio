@@ -35,7 +35,7 @@ const Forms = ({ setMessage }) => {
 
   return (
     <form
-      className="flex flex-col gap-4 text-base sm:text-xl sm:gap-6 p-2 sm:min-w-[430px] text-slate-800 font-medium"
+      className="flex flex-col gap-4 text-base sm:text-xl sm:gap-6 min-w-[200px] sm:min-w-[450px] text-slate-800 font-medium"
       ref={form}
       onSubmit={sendEmail}
     >
@@ -65,6 +65,7 @@ const Forms = ({ setMessage }) => {
           id="input-message"
           type="text"
           placeholder="Message"
+          rows={3}
           className="bg-transparent placeholder:text-slate-500 outline-none w-full"
         />
       </div>
