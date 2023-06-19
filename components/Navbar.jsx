@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsList, BsXLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 import { navVariants, pathVariants, menuVariants } from "../utils/motion";
@@ -11,6 +11,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [colorChange, setColorchange] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarColor);
+  }, []);
+
   const changeNavbarColor = () => {
     if (window.scrollY >= 120) {
       setColorchange(true);
@@ -18,8 +22,6 @@ const Navbar = () => {
       setColorchange(false);
     }
   };
-
-  window.addEventListener("scroll", changeNavbarColor);
 
   function handleClick() {
     setOpen(!open);
