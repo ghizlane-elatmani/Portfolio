@@ -1,48 +1,37 @@
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeIn } from "@utils/motion";
+import React from "react";
 
-const Project = ({ title, desc, url, image, tags, index, direction }) => {
+import { TbBrandNextjs } from "react-icons/tb";
+import Badge from "./Badge";
+
+const Project = ({ title, image, description, badges, siteURL, codeURL }) => {
   return (
-    <motion.div variants={fadeIn(direction, "spring", index * 0.5, 0.75)}>
-      <Link href={url}>
-        <div className="group border border-white overflow-hidden flex flex-col sm:flex-row justify-between rounded-lg ">
-          {/* IMAGE */}
-          <div className="sm:w-[35%] object-cover flex items-center justify-center sm:pl-7 sm:py-7 p-5">
-            <img src={image} className="w-full" alt="" />
-          </div>
+    <div className="card lg:card-side">
+      <figure className="lg:min-w-[45%] lg:max-w-[45%] object-cover">
+        <img
+          src={`${image}`}
+          alt="Album"
+          className="w-full h-full rounded-sm"
+        />
+      </figure>
 
-          {/* CONTENT */}
-          <div className="sm:w-[70%] px-7 py-7">
-            <p className="uppercase mb-2 font-bold text-blue-300">
-              project {index}
-            </p>
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
+        <p>{description}</p>
 
-            <div className="flex justify-between items-center font-bold text-xl mb-4 ">
-              <p className="text-white sm:text-2xl">{title}</p>
-              <BsFillArrowRightCircleFill className="group-hover:translate-x-1 group-hover:text-white duration-100 text-slate-400" />
-            </div>
+        <Badge badges={badges} />
 
-            <p className="text-base mb-4 font-medium text-white max-w-[50ch]">
-              {desc}
-            </p>
+        <div className="card-actions justify-end">
+          <Link href={siteURL} className="btn btn-primary">
+            Website
+          </Link>
 
-            <div className="flex flex-wrap gap-2 ">
-              {tags.map((tag, index) => (
-                <p
-                  className="border border-white font-bold text-white uppercase px-2 rounded-full text-sm"
-                  key={tag.id}
-                >
-                  {tag.title}
-                </p>
-              ))}
-            </div>
-          </div>
+          <Link href={codeURL} className="btn btn-secondary">
+            Code
+          </Link>
         </div>
-      </Link>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

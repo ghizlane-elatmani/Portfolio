@@ -14,30 +14,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
-body {
-  background-color: #fff;
-  font-family: "Raleway", sans-serif;
+.my-section {
+  @apply bg-base-100 text-base-content p-5 py-[4rem] lg:py-[6rem];
 }
 
-#home {
-  background: url("/abstract.png") no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: scroll;
-}
-
-.text-gradient {
-  background-color: #00dbde;
-  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.my-shadow {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-}
-
-.my-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.heading-2 {
+  @apply text-xl font-bold mb-10 underline underline-offset-4;
 }

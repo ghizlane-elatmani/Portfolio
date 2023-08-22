@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+
 export const metadata = {
   title: "Portfolio - Ghizlane EL ATMANI",
   description:
@@ -7,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-theme="business">
       <body>
         <main id="content">{children}</main>
       </body>
