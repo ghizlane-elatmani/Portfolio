@@ -6,7 +6,7 @@ const Skills = ({ title, value }) => {
       <p className="font-bold">{title}</p>
       <progress
         className="progress progress-primary w-56"
-        value={`${value}`}
+        value={`${value.toString()}`}
         max="100"
       ></progress>
     </div>

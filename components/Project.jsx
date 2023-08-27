@@ -6,12 +6,12 @@ import Badge from "./Badge";
 
 const Project = ({ title, image, description, badges, siteURL, codeURL }) => {
   return (
-    <div className="card lg:card-side">
+    <div className="card lg:card-side rounded-lg">
       <figure className="lg:min-w-[45%] lg:max-w-[45%] object-cover">
         <img
           src={`${image}`}
           alt="Album"
-          className="w-full h-full rounded-sm"
+          className="w-full h-full rounded-lg"
         />
       </figure>
 

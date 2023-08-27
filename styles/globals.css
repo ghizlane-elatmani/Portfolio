@@ -14,8 +14,12 @@ html {
   scroll-behavior: smooth !important;
 }
 
+.my-hero {
+  min-height: calc(100vh - 4rem);
+}
+
 .my-section {
-  @apply bg-base-100 text-base-content p-5 py-[4rem] lg:py-[6rem];
+  @apply text-base-content p-5 py-[4rem] lg:py-[6rem];
 }
 
 .heading-2 {
