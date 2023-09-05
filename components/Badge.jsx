@@ -12,35 +12,47 @@ import {
 const Badge = ({ badges }) => {
   return (
     <div className="flex flex-wrap gap-2 justify-center py-2">
-      <div className="badge gap-1 border-base-content">
-        <TbBrandNextjs />
-        Next.js
-      </div>
+      {badges.includes("next") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandNextjs />
+          Next.js
+        </div>
+      )}
 
-      <div className="badge gap-1 border-base-content">
-        <TbBrandReact />
-        React
-      </div>
+      {badges.includes("react") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandReact />
+          React
+        </div>
+      )}
 
-      <div className="badge gap-1 border-base-content">
-        <TbBrandJavascript />
-        Javascript
-      </div>
+      {badges.includes("javascript") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandJavascript />
+          Javascript
+        </div>
+      )}
 
-      <div className="badge gap-1 border-base-content">
-        <TbBrandTailwind />
-        Tailwind CSS
-      </div>
+      {badges.includes("tailwind") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandTailwind />
+          Tailwind CSS
+        </div>
+      )}
 
-      <div className="badge gap-1 border-base-content">
-        <TbBrandHtml5 />
-        HTML
-      </div>
+      {badges.includes("html") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandHtml5 />
+          HTML
+        </div>
+      )}
 
-      <div className="badge gap-1 border-base-content">
-        <TbBrandCss3 />
-        CSS
-      </div>
+      {badges.includes("css") && (
+        <div className="badge gap-1 border-base-content">
+          <TbBrandCss3 />
+          CSS
+        </div>
+      )}
     </div>
   );
 };
