@@ -12,7 +12,7 @@ const Projects = () => {
           <Project
             title="Admin ShopNow"
             image="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-            description="Weather App is a web application developped with the famous library React and communicating with the API openWeatherMap."
+            description="Updating..."
             badges="next mongodb react tailwind javascript html css"
             siteURL="#"
             codeURL="#"
