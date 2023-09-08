@@ -12,45 +12,55 @@ const Navbar = () => {
             <HiMenu size={24} />
           </label>
 
+          {/* === MOBILE NAVIGATION === */}
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <Link href={"/"}>Home</Link>
+            <li className="py-4">
+              <Link href={"/#home"}>Home</Link>
             </li>
 
-            <li>
-              <Link href={"/"}>About me</Link>
+            <li className="py-4">
+              <Link href={"/#about"}>About me</Link>
             </li>
 
-            <li>
-              <Link href={"/"}>Projects</Link>
+            <li className="py-4">
+              <Link href={"/#projects"}>Projects</Link>
+            </li>
+            <li className="py-4 btn btn-primary">
+              <Link href={"/#contact-me"}>Contact Me</Link>
             </li>
           </ul>
         </div>
+
+        {/* === LOGO === */}
         <a className="btn btn-ghost normal-case text-xl">
           <span className="text-accent">Ghizlane</span>
         </a>
       </div>
 
+      {/* === DESKTOP NAVIGATION === */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/#hero"}>Home</Link>
           </li>
 
           <li>
-            <Link href={"/"}>About me</Link>
+            <Link href={"/#about"}>About me</Link>
           </li>
 
           <li>
-            <Link href={"/"}>Projects</Link>
+            <Link href={"/#projects"}>Projects</Link>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Contact me</a>
+
+      <div className="hidden sm:flex sm:navbar-end">
+        <Link href={"/#contact-me"} className="btn btn-outline btn-primary">
+          Contact me
+        </Link>
       </div>
     </div>
   );

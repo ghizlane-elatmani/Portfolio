@@ -4,7 +4,7 @@ import Skills from "@components/Skills";
 
 const AboutMe = () => {
   return (
-    <section className="my-section bg-base-100 ">
+    <section id="about" className="my-section bg-base-100">
       <div className="max-w-4xl m-auto flex items-center flex-col text-center">
         <h2 className="heading-2">About me</h2>
 
@@ -19,7 +19,7 @@ const AboutMe = () => {
           applications efficiently that satisfy the customer needs.
         </p>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="flex flex-wrap gap-5 justify-center sm:grid sm:grid-cols-2 sm:gap-8">
           <Skills title="Javascript" value="70" />
           <Skills title="React" value="70" />
           <Skills title="Next.js" value="80" />

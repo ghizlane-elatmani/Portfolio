@@ -6,13 +6,9 @@ import Badge from "./Badge";
 
 const Project = ({ title, image, description, badges, siteURL, codeURL }) => {
   return (
-    <div className="card lg:card-side rounded-lg">
+    <div className="card lg:card-side rounded-lg shadow-lg border border-stone-100 overflow-hidden">
       <figure className="lg:min-w-[45%] lg:max-w-[45%] object-cover">
-        <img
-          src={`${image}`}
-          alt="Album"
-          className="w-full h-full rounded-lg"
-        />
+        <img src={`${image}`} alt="Album" className="w-full h-full " />
       </figure>
 
       <div className="card-body">

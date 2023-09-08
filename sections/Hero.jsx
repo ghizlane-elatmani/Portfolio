@@ -3,6 +3,7 @@
 const Hero = () => {
   return (
     <div
+      id="hero"
       className="hero my-hero 2xl:min-h-[700px]"
       style={{
         backgroundImage:

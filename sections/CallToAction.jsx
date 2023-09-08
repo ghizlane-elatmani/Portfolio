@@ -2,7 +2,7 @@
 
 const CallToAction = () => {
   return (
-    <section className="my-section bg-primary-focus">
+    <section id="contact-me" className="my-section bg-primary-focus">
       <h2 className="text-center mb-5 font-bold text-primary-content text-2xl">
         Contact Me
       </h2>
