@@ -25,15 +25,6 @@ const Footer = () => {
               />
             </Link>
           </button>
-
-          <button type="button">
-            <Link href="#home">
-              <img
-                src="/group.svg"
-                className="text-white h-[24px] hover:text-neon-blue hover:scale-105 duration-75"
-              />
-            </Link>
-          </button>
         </div>
       </div>
     </section>
